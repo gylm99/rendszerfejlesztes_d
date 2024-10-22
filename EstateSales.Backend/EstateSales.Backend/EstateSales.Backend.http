@@ -1,0 +1,6 @@
+@EstateSales.Backend_HostAddress = http://localhost:5166
+
+GET {{EstateSales.Backend_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

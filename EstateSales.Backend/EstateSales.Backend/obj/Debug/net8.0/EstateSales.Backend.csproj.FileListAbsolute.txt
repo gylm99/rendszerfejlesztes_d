@@ -1,0 +1,8 @@
+C:\Lacidok\RendszerFejlesztes\rendszerfejlesztes_d\EstateSales.Backend\EstateSales.Backend\obj\Debug\net8.0\EstateSales.Backend.csproj.AssemblyReference.cache
+C:\Lacidok\RendszerFejlesztes\rendszerfejlesztes_d\EstateSales.Backend\EstateSales.Backend\obj\Debug\net8.0\EstateSales.Backend.GeneratedMSBuildEditorConfig.editorconfig
+C:\Lacidok\RendszerFejlesztes\rendszerfejlesztes_d\EstateSales.Backend\EstateSales.Backend\obj\Debug\net8.0\EstateSales.Backend.AssemblyInfoInputs.cache
+C:\Lacidok\RendszerFejlesztes\rendszerfejlesztes_d\EstateSales.Backend\EstateSales.Backend\obj\Debug\net8.0\EstateSales.Backend.AssemblyInfo.cs
+C:\Lacidok\RendszerFejlesztes\rendszerfejlesztes_d\EstateSales.Backend\EstateSales.Backend\obj\Debug\net8.0\EstateSales.Backend.csproj.CoreCompileInputs.cache
+C:\Lacidok\RendszerFejlesztes\rendszerfejlesztes_d\EstateSales.Backend\EstateSales.Backend\obj\Debug\net8.0\EstateSales.Backend.MvcApplicationPartsAssemblyInfo.cs
+C:\Lacidok\RendszerFejlesztes\rendszerfejlesztes_d\EstateSales.Backend\EstateSales.Backend\obj\Debug\net8.0\EstateSales.Backend.MvcApplicationPartsAssemblyInfo.cache
+C:\Lacidok\RendszerFejlesztes\rendszerfejlesztes_d\EstateSales.Backend\EstateSales.Backend\obj\Debug\net8.0\EstateSales.Backend.sourcelink.json
