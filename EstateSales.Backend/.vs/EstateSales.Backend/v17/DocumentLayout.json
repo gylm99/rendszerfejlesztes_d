@@ -15,24 +15,36 @@
       "RelativeMoniker": "D:0:0:{4906A35D-1277-4719-AA95-C8051EC3BB5A}|EstateSales.Backend\\EstateSales.Backend.csproj|solutionrelative:estatesales.backend\\repo\\userrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4906A35D-1277-4719-AA95-C8051EC3BB5A}|EstateSales.Backend\\EstateSales.Backend.csproj|c:\\lacidok\\rendszerfejlesztes\\rendszerfejlesztes_d\\estatesales.backend\\estatesales.backend\\backendextensions\\backendextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4906A35D-1277-4719-AA95-C8051EC3BB5A}|EstateSales.Backend\\EstateSales.Backend.csproj|solutionrelative:estatesales.backend\\backendextensions\\backendextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4906A35D-1277-4719-AA95-C8051EC3BB5A}|EstateSales.Backend\\EstateSales.Backend.csproj|c:\\lacidok\\rendszerfejlesztes\\rendszerfejlesztes_d\\estatesales.backend\\estatesales.backend\\context\\estateinmemorycontextcs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4906A35D-1277-4719-AA95-C8051EC3BB5A}|EstateSales.Backend\\EstateSales.Backend.csproj|solutionrelative:estatesales.backend\\context\\estateinmemorycontextcs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4906A35D-1277-4719-AA95-C8051EC3BB5A}|EstateSales.Backend\\EstateSales.Backend.csproj|c:\\lacidok\\rendszerfejlesztes\\rendszerfejlesztes_d\\estatesales.backend\\estatesales.backend\\context\\estatecontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4906A35D-1277-4719-AA95-C8051EC3BB5A}|EstateSales.Backend\\EstateSales.Backend.csproj|solutionrelative:estatesales.backend\\context\\estatecontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4906A35D-1277-4719-AA95-C8051EC3BB5A}|EstateSales.Backend\\EstateSales.Backend.csproj|c:\\lacidok\\rendszerfejlesztes\\rendszerfejlesztes_d\\estatesales.backend\\estatesales.backend\\response\\controllerresponse .cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4906A35D-1277-4719-AA95-C8051EC3BB5A}|EstateSales.Backend\\EstateSales.Backend.csproj|solutionrelative:estatesales.backend\\response\\controllerresponse .cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{4906A35D-1277-4719-AA95-C8051EC3BB5A}|EstateSales.Backend\\EstateSales.Backend.csproj|c:\\lacidok\\rendszerfejlesztes\\rendszerfejlesztes_d\\estatesales.backend\\estatesales.backend\\datas\\entities\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4906A35D-1277-4719-AA95-C8051EC3BB5A}|EstateSales.Backend\\EstateSales.Backend.csproj|solutionrelative:estatesales.backend\\datas\\entities\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{4906A35D-1277-4719-AA95-C8051EC3BB5A}|EstateSales.Backend\\EstateSales.Backend.csproj|c:\\lacidok\\rendszerfejlesztes\\rendszerfejlesztes_d\\estatesales.backend\\estatesales.backend\\response\\errorstore.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4906A35D-1277-4719-AA95-C8051EC3BB5A}|EstateSales.Backend\\EstateSales.Backend.csproj|solutionrelative:estatesales.backend\\response\\errorstore.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4906A35D-1277-4719-AA95-C8051EC3BB5A}|EstateSales.Backend\\EstateSales.Backend.csproj|c:\\lacidok\\rendszerfejlesztes\\rendszerfejlesztes_d\\estatesales.backend\\estatesales.backend\\backendextensions\\backendextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4906A35D-1277-4719-AA95-C8051EC3BB5A}|EstateSales.Backend\\EstateSales.Backend.csproj|solutionrelative:estatesales.backend\\backendextensions\\backendextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4906A35D-1277-4719-AA95-C8051EC3BB5A}|EstateSales.Backend\\EstateSales.Backend.csproj|c:\\lacidok\\rendszerfejlesztes\\rendszerfejlesztes_d\\estatesales.backend\\estatesales.backend\\context\\estatecontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4906A35D-1277-4719-AA95-C8051EC3BB5A}|EstateSales.Backend\\EstateSales.Backend.csproj|solutionrelative:estatesales.backend\\context\\estatecontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4906A35D-1277-4719-AA95-C8051EC3BB5A}|EstateSales.Backend\\EstateSales.Backend.csproj|c:\\lacidok\\rendszerfejlesztes\\rendszerfejlesztes_d\\estatesales.backend\\estatesales.backend\\context\\estateinmemorycontextcs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4906A35D-1277-4719-AA95-C8051EC3BB5A}|EstateSales.Backend\\EstateSales.Backend.csproj|solutionrelative:estatesales.backend\\context\\estateinmemorycontextcs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{4906A35D-1277-4719-AA95-C8051EC3BB5A}|EstateSales.Backend\\EstateSales.Backend.csproj|c:\\lacidok\\rendszerfejlesztes\\rendszerfejlesztes_d\\estatesales.backend\\estatesales.backend\\context\\modelbuilderextension.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4906A35D-1277-4719-AA95-C8051EC3BB5A}|EstateSales.Backend\\EstateSales.Backend.csproj|solutionrelative:estatesales.backend\\context\\modelbuilderextension.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4906A35D-1277-4719-AA95-C8051EC3BB5A}|EstateSales.Backend\\EstateSales.Backend.csproj|c:\\lacidok\\rendszerfejlesztes\\rendszerfejlesztes_d\\estatesales.backend\\estatesales.backend\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4906A35D-1277-4719-AA95-C8051EC3BB5A}|EstateSales.Backend\\EstateSales.Backend.csproj|solutionrelative:estatesales.backend\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -42,19 +54,83 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 8,
           "Children": [
             {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "UserController.cs",
-              "DocumentMoniker": "C:\\Lacidok\\RendszerFejlesztes\\rendszerfejlesztes_d\\EstateSales.Backend\\EstateSales.Backend\\Controllers\\UserController.cs",
-              "RelativeDocumentMoniker": "EstateSales.Backend\\Controllers\\UserController.cs",
-              "ToolTip": "C:\\Lacidok\\RendszerFejlesztes\\rendszerfejlesztes_d\\EstateSales.Backend\\EstateSales.Backend\\Controllers\\UserController.cs",
-              "RelativeToolTip": "EstateSales.Backend\\Controllers\\UserController.cs",
-              "ViewState": "AgIAACYAAAAAAAAAAAAAACoAAABCAAAAAAAAAA==",
+              "DocumentIndex": 3,
+              "Title": "ControllerResponse .cs",
+              "DocumentMoniker": "C:\\Lacidok\\RendszerFejlesztes\\rendszerfejlesztes_d\\EstateSales.Backend\\EstateSales.Backend\\Response\\ControllerResponse .cs",
+              "RelativeDocumentMoniker": "EstateSales.Backend\\Response\\ControllerResponse .cs",
+              "ToolTip": "C:\\Lacidok\\RendszerFejlesztes\\rendszerfejlesztes_d\\EstateSales.Backend\\EstateSales.Backend\\Response\\ControllerResponse .cs",
+              "RelativeToolTip": "EstateSales.Backend\\Response\\ControllerResponse .cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-21T20:32:34.082Z",
+              "WhenOpened": "2024-10-22T16:29:42.91Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ErrorStore.cs",
+              "DocumentMoniker": "C:\\Lacidok\\RendszerFejlesztes\\rendszerfejlesztes_d\\EstateSales.Backend\\EstateSales.Backend\\Response\\ErrorStore.cs",
+              "RelativeDocumentMoniker": "EstateSales.Backend\\Response\\ErrorStore.cs",
+              "ToolTip": "C:\\Lacidok\\RendszerFejlesztes\\rendszerfejlesztes_d\\EstateSales.Backend\\EstateSales.Backend\\Response\\ErrorStore.cs",
+              "RelativeToolTip": "EstateSales.Backend\\Response\\ErrorStore.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-22T16:28:07.292Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "EstateInMemoryContextcs.cs",
+              "DocumentMoniker": "C:\\Lacidok\\RendszerFejlesztes\\rendszerfejlesztes_d\\EstateSales.Backend\\EstateSales.Backend\\Context\\EstateInMemoryContextcs.cs",
+              "RelativeDocumentMoniker": "EstateSales.Backend\\Context\\EstateInMemoryContextcs.cs",
+              "ToolTip": "C:\\Lacidok\\RendszerFejlesztes\\rendszerfejlesztes_d\\EstateSales.Backend\\EstateSales.Backend\\Context\\EstateInMemoryContextcs.cs",
+              "RelativeToolTip": "EstateSales.Backend\\Context\\EstateInMemoryContextcs.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-20T14:56:11.428Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "EstateContext.cs",
+              "DocumentMoniker": "C:\\Lacidok\\RendszerFejlesztes\\rendszerfejlesztes_d\\EstateSales.Backend\\EstateSales.Backend\\Context\\EstateContext.cs",
+              "RelativeDocumentMoniker": "EstateSales.Backend\\Context\\EstateContext.cs",
+              "ToolTip": "C:\\Lacidok\\RendszerFejlesztes\\rendszerfejlesztes_d\\EstateSales.Backend\\EstateSales.Backend\\Context\\EstateContext.cs",
+              "RelativeToolTip": "EstateSales.Backend\\Context\\EstateContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-20T14:51:17.078Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "BackendExtensions.cs",
+              "DocumentMoniker": "C:\\Lacidok\\RendszerFejlesztes\\rendszerfejlesztes_d\\EstateSales.Backend\\EstateSales.Backend\\BackendExtensions\\BackendExtensions.cs",
+              "RelativeDocumentMoniker": "EstateSales.Backend\\BackendExtensions\\BackendExtensions.cs",
+              "ToolTip": "C:\\Lacidok\\RendszerFejlesztes\\rendszerfejlesztes_d\\EstateSales.Backend\\EstateSales.Backend\\BackendExtensions\\BackendExtensions.cs",
+              "RelativeToolTip": "EstateSales.Backend\\BackendExtensions\\BackendExtensions.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-20T14:21:51.275Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "IUserRepo.cs",
+              "DocumentMoniker": "C:\\Lacidok\\RendszerFejlesztes\\rendszerfejlesztes_d\\EstateSales.Backend\\EstateSales.Backend\\Repo\\IUserRepo.cs",
+              "RelativeDocumentMoniker": "EstateSales.Backend\\Repo\\IUserRepo.cs",
+              "ToolTip": "C:\\Lacidok\\RendszerFejlesztes\\rendszerfejlesztes_d\\EstateSales.Backend\\EstateSales.Backend\\Repo\\IUserRepo.cs",
+              "RelativeToolTip": "EstateSales.Backend\\Repo\\IUserRepo.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAA4AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-21T19:47:49.716Z",
               "EditorCaption": ""
             },
             {
@@ -65,79 +141,39 @@
               "RelativeDocumentMoniker": "EstateSales.Backend\\Repo\\UserRepo.cs",
               "ToolTip": "C:\\Lacidok\\RendszerFejlesztes\\rendszerfejlesztes_d\\EstateSales.Backend\\EstateSales.Backend\\Repo\\UserRepo.cs",
               "RelativeToolTip": "EstateSales.Backend\\Repo\\UserRepo.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAxAAAAAAAAAA==",
+              "ViewState": "AgIAABEAAAAAAAAAAAAAACAAAAA5AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-21T19:54:41.737Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "IUserRepo.cs",
-              "DocumentMoniker": "C:\\Lacidok\\RendszerFejlesztes\\rendszerfejlesztes_d\\EstateSales.Backend\\EstateSales.Backend\\Repo\\IUserRepo.cs",
-              "RelativeDocumentMoniker": "EstateSales.Backend\\Repo\\IUserRepo.cs",
-              "ToolTip": "C:\\Lacidok\\RendszerFejlesztes\\rendszerfejlesztes_d\\EstateSales.Backend\\EstateSales.Backend\\Repo\\IUserRepo.cs",
-              "RelativeToolTip": "EstateSales.Backend\\Repo\\IUserRepo.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAATAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "UserController.cs",
+              "DocumentMoniker": "C:\\Lacidok\\RendszerFejlesztes\\rendszerfejlesztes_d\\EstateSales.Backend\\EstateSales.Backend\\Controllers\\UserController.cs",
+              "RelativeDocumentMoniker": "EstateSales.Backend\\Controllers\\UserController.cs",
+              "ToolTip": "C:\\Lacidok\\RendszerFejlesztes\\rendszerfejlesztes_d\\EstateSales.Backend\\EstateSales.Backend\\Controllers\\UserController.cs",
+              "RelativeToolTip": "EstateSales.Backend\\Controllers\\UserController.cs",
+              "ViewState": "AgIAAGEAAAAAAAAAAAAAAGwAAAA9AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-21T19:47:49.716Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "User.cs",
-              "DocumentMoniker": "C:\\Lacidok\\RendszerFejlesztes\\rendszerfejlesztes_d\\EstateSales.Backend\\EstateSales.Backend\\Datas\\Entities\\User.cs",
-              "RelativeDocumentMoniker": "EstateSales.Backend\\Datas\\Entities\\User.cs",
-              "ToolTip": "C:\\Lacidok\\RendszerFejlesztes\\rendszerfejlesztes_d\\EstateSales.Backend\\EstateSales.Backend\\Datas\\Entities\\User.cs",
-              "RelativeToolTip": "EstateSales.Backend\\Datas\\Entities\\User.cs",
-              "ViewState": "AgIAABMAAAAAAAAAAAAAACUAAAAWAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-21T14:11:19.634Z",
+              "WhenOpened": "2024-10-21T20:32:34.082Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "EstateInMemoryContextcs.cs",
-              "DocumentMoniker": "C:\\Lacidok\\RendszerFejlesztes\\rendszerfejlesztes_d\\EstateSales.Backend\\EstateSales.Backend\\Context\\EstateInMemoryContextcs.cs",
-              "RelativeDocumentMoniker": "EstateSales.Backend\\Context\\EstateInMemoryContextcs.cs",
-              "ToolTip": "C:\\Lacidok\\RendszerFejlesztes\\rendszerfejlesztes_d\\EstateSales.Backend\\EstateSales.Backend\\Context\\EstateInMemoryContextcs.cs",
-              "RelativeToolTip": "EstateSales.Backend\\Context\\EstateInMemoryContextcs.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAnAAAAAAAAAA==",
+              "Title": "User.cs",
+              "DocumentMoniker": "C:\\Lacidok\\RendszerFejlesztes\\rendszerfejlesztes_d\\EstateSales.Backend\\EstateSales.Backend\\Datas\\Entities\\User.cs",
+              "RelativeDocumentMoniker": "EstateSales.Backend\\Datas\\Entities\\User.cs",
+              "ToolTip": "C:\\Lacidok\\RendszerFejlesztes\\rendszerfejlesztes_d\\EstateSales.Backend\\EstateSales.Backend\\Datas\\Entities\\User.cs",
+              "RelativeToolTip": "EstateSales.Backend\\Datas\\Entities\\User.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAArAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-20T14:56:11.428Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-23T14:08:47.76Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "EstateContext.cs",
-              "DocumentMoniker": "C:\\Lacidok\\RendszerFejlesztes\\rendszerfejlesztes_d\\EstateSales.Backend\\EstateSales.Backend\\Context\\EstateContext.cs",
-              "RelativeDocumentMoniker": "EstateSales.Backend\\Context\\EstateContext.cs",
-              "ToolTip": "C:\\Lacidok\\RendszerFejlesztes\\rendszerfejlesztes_d\\EstateSales.Backend\\EstateSales.Backend\\Context\\EstateContext.cs",
-              "RelativeToolTip": "EstateSales.Backend\\Context\\EstateContext.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAuAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-20T14:51:17.078Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "BackendExtensions.cs",
-              "DocumentMoniker": "C:\\Lacidok\\RendszerFejlesztes\\rendszerfejlesztes_d\\EstateSales.Backend\\EstateSales.Backend\\BackendExtensions\\BackendExtensions.cs",
-              "RelativeDocumentMoniker": "EstateSales.Backend\\BackendExtensions\\BackendExtensions.cs",
-              "ToolTip": "C:\\Lacidok\\RendszerFejlesztes\\rendszerfejlesztes_d\\EstateSales.Backend\\EstateSales.Backend\\BackendExtensions\\BackendExtensions.cs",
-              "RelativeToolTip": "EstateSales.Backend\\BackendExtensions\\BackendExtensions.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-20T14:21:51.275Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 9,
               "Title": "ModelBuilderExtension.cs",
               "DocumentMoniker": "C:\\Lacidok\\RendszerFejlesztes\\rendszerfejlesztes_d\\EstateSales.Backend\\EstateSales.Backend\\Context\\ModelBuilderExtension.cs",
               "RelativeDocumentMoniker": "EstateSales.Backend\\Context\\ModelBuilderExtension.cs",
@@ -145,8 +181,19 @@
               "RelativeToolTip": "EstateSales.Backend\\Context\\ModelBuilderExtension.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAA+AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-20T14:58:06.414Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-20T14:58:06.414Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Lacidok\\RendszerFejlesztes\\rendszerfejlesztes_d\\EstateSales.Backend\\EstateSales.Backend\\Program.cs",
+              "RelativeDocumentMoniker": "EstateSales.Backend\\Program.cs",
+              "ToolTip": "C:\\Lacidok\\RendszerFejlesztes\\rendszerfejlesztes_d\\EstateSales.Backend\\EstateSales.Backend\\Program.cs",
+              "RelativeToolTip": "EstateSales.Backend\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-22T14:33:15.471Z"
             }
           ]
         }

@@ -10,6 +10,7 @@ namespace EstateSales.Backend.Datas.Entities
         public string Email { get; set; }
         public string Password { get; set; }
         public int Number { get; set; }
+        public bool HasId => Id!=Guid.Empty;
 
         public User(Guid id, string name, string email, string password, int number)
         {
