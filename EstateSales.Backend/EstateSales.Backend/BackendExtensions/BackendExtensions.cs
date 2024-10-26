@@ -1,5 +1,6 @@
 ﻿using EstateSales.Backend.Context;
 using EstateSales.Backend.Repo;
+using EstateSales.Backend.Repo.RepositoryManager;
 using Microsoft.EntityFrameworkCore;
 
 namespace EstateSales.Backend.BackendExtensions
@@ -33,6 +34,7 @@ namespace EstateSales.Backend.BackendExtensions
         public static void ConfigureRepos (this IServiceCollection services)
         {
             services.AddScoped<IUserRepo, UserRepo>();
+            services.AddScoped<IRepositoryManager, RepositoryManager>();
         }
     }
 }
