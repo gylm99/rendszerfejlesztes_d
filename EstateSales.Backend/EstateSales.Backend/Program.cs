@@ -10,9 +10,7 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-builder.Services.AddCors();
-builder.Services.ConfigureInMemoryContext();
-builder.Services.ConfigureRepos();
+builder.Services.ConfigureBackend();
 
 var app = builder.Build();
 
@@ -26,7 +24,7 @@ if (app.Environment.IsDevelopment())
 
 using(var scope = app.Services.CreateAsyncScope())
 {
-    var dbContext=scope.ServiceProvider.GetRequiredService<EstateInMemoryContextcs>();
+    var dbContext=scope.ServiceProvider.GetRequiredService<EstateInMemoryContext>();
     dbContext.Database.EnsureCreated();
 }
 app.UseCors("EstateCors");

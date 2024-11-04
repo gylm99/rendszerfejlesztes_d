@@ -1,15 +1,10 @@
 ﻿using EstateSales.Backend.Datas.Entities;
-using EstateSales.Backend.Responses;
+using EstateSales.Backend.Repo.Base;
 
 namespace EstateSales.Backend.Repo
 {
-    public interface IUserRepo
+    public interface IUserRepo : IBaseRepo<User>
     {
-        Task<List<User>> GetAllAsync();
-        Task<User?> GetByIdAsync(Guid id);
-        Task<Responsee> InsertAsync(User user);
-        Task<Responsee> DeleteAsync(Guid id);
-        Task<Responsee> UpdateAsync(User user);
         
     }
 }
