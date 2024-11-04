@@ -1,6 +1,6 @@
 ﻿using EstateSales.Backend.Context;
 using EstateSales.Backend.Datas.Entities;
-using EstateSales.Backend.Response;
+using EstateSales.Backend.Responses;
 using Microsoft.EntityFrameworkCore;
 
 namespace EstateSales.Backend.Repo
@@ -12,9 +12,9 @@ namespace EstateSales.Backend.Repo
 
 
 
-        private async Task<ControllerResponse> InsertNewItemAsync(User user)
+        private async Task<Responsee> InsertNewItemAsync(User user)
         {
-            ControllerResponse response = new();
+            Responsee response = new();
             try
             {
                 _dbcontext.Users.Add(user);
@@ -30,9 +30,9 @@ namespace EstateSales.Backend.Repo
         }
 
 
-        public async Task<ControllerResponse> UpdateAsync(User user)
+        public async Task<Responsee> UpdateAsync(User user)
         {
-            ControllerResponse response = new ControllerResponse();
+            Responsee response = new Responsee();
             _dbcontext.ChangeTracker.Clear();
             _dbcontext.Entry(user).State = EntityState.Modified;
             try
@@ -50,7 +50,7 @@ namespace EstateSales.Backend.Repo
             return response;
         }
 
-        public async Task<ControllerResponse> InsertAsync(User user) 
+        public async Task<Responsee> InsertAsync(User user) 
         {
             if (user.HasId)
             {
@@ -81,9 +81,9 @@ namespace EstateSales.Backend.Repo
             return await _dbcontext.Users.FirstOrDefaultAsync(x => x.Id == id);
         }
 
-        public async Task<ControllerResponse> DeleteAsync(Guid id)
+        public async Task<Responsee> DeleteAsync(Guid id)
         {
-            ControllerResponse response = new ControllerResponse();
+            Responsee response = new Responsee();
             User? userToDelete = await GetByIdAsync(id);
             if(userToDelete is null || userToDelete == default)
             {

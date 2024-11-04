@@ -1,6 +1,6 @@
 ﻿using EstateSales.Backend.Datas.Entities;
 using EstateSales.Backend.Repo;
-using EstateSales.Backend.Response;
+using EstateSales.Backend.Responses;
 using Microsoft.AspNetCore.Mvc;
 
 namespace EstateSales.Backend.Controllers
@@ -53,7 +53,7 @@ namespace EstateSales.Backend.Controllers
         [HttpPut]
         public async Task<IActionResult> UpdateAsync(User entity)
         {
-            ControllerResponse response = new ControllerResponse();
+            Responsee response = new Responsee();
 
             if(_userRepo is not null)
             {
@@ -80,7 +80,7 @@ namespace EstateSales.Backend.Controllers
         [HttpDelete("{id}")]
         public async Task<ActionResult> DeleteStudentAsync(Guid id)
         {
-            ControllerResponse response = new ControllerResponse();
+            Responsee response = new Responsee();
             if (_userRepo is not null)
             {
                 response = await _userRepo.DeleteAsync(id);
@@ -103,7 +103,7 @@ namespace EstateSales.Backend.Controllers
         [HttpPost]
         public async Task<IActionResult> InsertStudentAsync(User user)
         {
-            ControllerResponse response = new ControllerResponse();
+            Responsee response = new Responsee();
             if (user is not null)
             {
                 response = await _userRepo.InsertAsync(user);

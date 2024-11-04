@@ -1,4 +1,4 @@
-﻿namespace EstateSales.Backend.Response
+﻿namespace EstateSales.Backend.Responses
 {
     public class ErrorStore
     {

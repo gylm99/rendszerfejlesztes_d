@@ -1,4 +1,4 @@
-﻿using EstateSales.Backend.Response;
+﻿using EstateSales.Backend.Responses;
 using Microsoft.EntityFrameworkCore;
 using System.Linq.Expressions;
 using EstateSales.Backend.Datas.Entities;
@@ -6,8 +6,8 @@ using EstateSales.Backend.Datas.Entities;
 namespace EstateSales.Backend.Repo.RepositoryManager.Base
 {
         public abstract class RepositoryBase<TDbContext, TEntity> : IRepositoryBase<TEntity>
-       where TDbContext : DbContext
-       where TEntity : class, IDbEntity<TEntity>, new()
+            where TDbContext : DbContext
+            where TEntity : class, IDbEntity<TEntity>, new()
         {
             private readonly DbContext? _dbContext;
             private readonly DbSet<TEntity>? _dbSet;
@@ -33,9 +33,9 @@ namespace EstateSales.Backend.Repo.RepositoryManager.Base
                 }
                 return _dbSet.Where(expression).AsNoTracking();
             }
-            public async Task<ControllerResponse> UpdateAsync(TEntity entity)
+            public async Task<Responsee> UpdateAsync(TEntity entity)
             {
-                ControllerResponse response = new();
+                Responsee response = new();
                 try
                 {
                     if (_dbContext is not null)
@@ -55,9 +55,9 @@ namespace EstateSales.Backend.Repo.RepositoryManager.Base
                 response.AppendNewError($"{entity} frissítése nem sikerült!");
                 return response;
             }
-            public async Task<ControllerResponse> DeleteAsync(Guid id)
+            public async Task<Responsee> DeleteAsync(Guid id)
             {
-                ControllerResponse response = new();
+                Responsee response = new();
 
                 TEntity? entityToDelete = FindByCondition(e => e.Id == id).FirstOrDefault();
 
@@ -91,9 +91,9 @@ namespace EstateSales.Backend.Repo.RepositoryManager.Base
                 response.AppendNewError($"Az entitás törlése nem sikerült!");
                 return response;
             }
-            public async Task<ControllerResponse> CreateAsync(TEntity entity)
+            public async Task<Responsee> CreateAsync(TEntity entity)
             {
-                ControllerResponse response = new();
+                Responsee response = new();
                 if (_dbSet is null)
                 {
                     response.AppendNewError($"{entity} osztály hozzáadása az adatbázishoz nem sikerült!");

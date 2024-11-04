@@ -1,5 +1,5 @@
 ﻿using EstateSales.Backend.Datas.Entities;
-using EstateSales.Backend.Response;
+using EstateSales.Backend.Responses;
 
 namespace EstateSales.Backend.Repo
 {
@@ -7,9 +7,9 @@ namespace EstateSales.Backend.Repo
     {
         Task<List<User>> GetAllAsync();
         Task<User?> GetByIdAsync(Guid id);
-        Task<ControllerResponse> InsertAsync(User user);
-        Task<ControllerResponse> DeleteAsync(Guid id);
-        Task<ControllerResponse> UpdateAsync(User user);
+        Task<Responsee> InsertAsync(User user);
+        Task<Responsee> DeleteAsync(Guid id);
+        Task<Responsee> UpdateAsync(User user);
         
     }
 }
