@@ -1,5 +1,5 @@
 <template>
-   <body class="bg-gray-100">
+   <body class="bg-gray-100 h-screen">
         <!-- Header -->
         <header class="bg-white shadow py-4 px-6 flex items-center justify-between">
             <!-- Search Bar -->
@@ -25,50 +25,314 @@
 
         <!-- Content Grid -->
         <main class="p-6">
-            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-                <!-- Card -->
-                <div class="bg-white shadow rounded-lg overflow-hidden">
-                    <img src="https://images.pexels.com/photos/106399/pexels-photo-106399.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Product Image" class="w-full h-48 object-cover">
-                    <div class="p-4">
-                        <h3 class="text-lg font-semibold mb-2">Product Title</h3>
-                        <p class="text-gray-600">$99.99</p>
-                        <span class="bg-green-200 text-green-800 text-xs font-semibold px-2 py-1 rounded">New Arrival</span>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
+                <!-- Card 1 -->
+                <div class="bg-white shadow rounded-lg overflow-hidden transform hover:scale-105 transition duration-300 ease-in-out">
+                    <div class="relative inline-block">
+                        <span class="bg-green-200 text-green-800 text-xs font-semibold px-2 py-1 rounded absolute top-2 left-2">For Sale</span>
+                        <img src="https://images.pexels.com/photos/106399/pexels-photo-106399.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Product Image" class="w-full h-48 object-cover">
+                    </div>
+                     <div class="grid grid-cols-3  px-4 pt-1">
+                        <h3 class="text-md font-semibold mb-2">50,90 M Ft</h3>
+                        <h3 class="text-md font-semibold mb-2">Base area</h3>
+                        <h3 class="text-md font-semibold mb-2">Balcony</h3>
+                    </div>
+                    <div class="grid grid-cols-3 px-4 py-0">
+                        <h3>Szeged, Rákóczi utca 20</h3>
+                        <p class="text-gray-600">29 m<sup>2</sup></p>
+                        <p class="text-gray-600">11 m<sup>2</sup></p>
                     </div>
                 </div>
-
-                <!-- Repeat Card for More Products -->
-                <div class="bg-white shadow rounded-lg overflow-hidden">
-                    <img src="https://images.pexels.com/photos/186077/pexels-photo-186077.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Product Image" class="w-full h-48 object-cover">
-                    <div class="p-4">
-                        <h3 class="text-lg font-semibold mb-2">Product Title</h3>
-                        <p class="text-gray-600">$99.99</p>
-                        <span class="bg-green-200 text-green-800 text-xs font-semibold px-2 py-1 rounded">New Arrival</span>
+                <!-- Card 2 -->
+                <div class="bg-white shadow rounded-lg overflow-hidden transform hover:scale-105 transition duration-300 ease-in-out">
+                    <div class="relative inline-block">
+                        <span class="bg-green-200 text-green-800 text-xs font-semibold px-2 py-1 rounded absolute top-2 left-2">For Rent</span>
+                        <img src="https://images.pexels.com/photos/3288100/pexels-photo-3288100.png?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Product Image" class="w-full h-48 object-cover">
+                    </div>
+                     <div class="grid grid-cols-3  px-4 pt-1">
+                        <h3 class="text-md font-semibold mb-2">110k Ft/month</h3>
+                        <h3 class="text-md font-semibold mb-2">Base area</h3>
+                        <h3 class="text-md font-semibold mb-2">Balcony</h3>
+                    </div>
+                    <div class="grid grid-cols-3 px-4 py-0">
+                        <h3>Szeged, Kereszttöltés utca 52</h3>
+                        <p class="text-gray-600">41 m<sup>2</sup></p>
+                        <p class="text-gray-600">5 m<sup>2</sup></p>
                     </div>
                 </div>
-                <div class="bg-white shadow rounded-lg overflow-hidden">
-                    <img src="https://images.pexels.com/photos/186077/pexels-photo-186077.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Product Image" class="w-full h-48 object-cover">
-                    <div class="p-4">
-                        <h3 class="text-lg font-semibold mb-2">Product Title</h3>
-                        <p class="text-gray-600">$99.99</p>
-                        <span class="bg-green-200 text-green-800 text-xs font-semibold px-2 py-1 rounded">New Arrival</span>
+                <!-- Card 3 -->
+                <div class="bg-white shadow rounded-lg overflow-hidden transform hover:scale-105 transition duration-300 ease-in-out">
+                    <div class="relative inline-block">
+                        <span class="bg-green-200 text-green-800 text-xs font-semibold px-2 py-1 rounded absolute top-2 left-2">For Sale</span>
+                        <img src="https://images.pexels.com/photos/323780/pexels-photo-323780.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Product Image" class="w-full h-48 object-cover">
+                    </div>
+                     <div class="grid grid-cols-3  px-4 pt-1">
+                        <h3 class="text-md font-semibold mb-2">46,60 M Ft</h3>
+                        <h3 class="text-md font-semibold mb-2">Base area</h3>
+                        <h3 class="text-md font-semibold mb-2">Balcony</h3>
+                    </div>
+                    <div class="grid grid-cols-3 px-4 py-0">
+                        <h3>Szeged, Rákóczi utca 20</h3>
+                        <p class="text-gray-600">80 m<sup>2</sup></p>
+                        <p class="text-gray-600">- m<sup>2</sup></p>
                     </div>
                 </div>
-                <div class="bg-white shadow rounded-lg overflow-hidden">
-                    <img src="https://images.pexels.com/photos/186077/pexels-photo-186077.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Product Image" class="w-full h-48 object-cover">
-                    <div class="p-4">
-                        <h3 class="text-lg font-semibold mb-2">Product Title</h3>
-                        <p class="text-gray-600">$99.99</p>
-                        <span class="bg-green-200 text-green-800 text-xs font-semibold px-2 py-1 rounded">New Arrival</span>
+                <!-- Card 4 -->
+                <div class="bg-white shadow rounded-lg overflow-hidden transform hover:scale-105 transition duration-300 ease-in-out">
+                    <div class="relative inline-block">
+                        <span class="bg-green-200 text-green-800 text-xs font-semibold px-2 py-1 rounded absolute top-2 left-2">For Rent</span>
+                        <img src="https://images.pexels.com/photos/1396132/pexels-photo-1396132.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Product Image" class="w-full h-48 object-cover">
+                    </div>
+                     <div class="grid grid-cols-3  px-4 pt-1">
+                        <h3 class="text-md font-semibold mb-2">50,90 M Ft</h3>
+                        <h3 class="text-md font-semibold mb-2">Base area</h3>
+                        <h3 class="text-md font-semibold mb-2">Balcony</h3>
+                    </div>
+                    <div class="grid grid-cols-3 px-4 py-0">
+                        <h3>Szeged, Rákóczi utca 20</h3>
+                        <p class="text-gray-600">29 m<sup>2</sup></p>
+                        <p class="text-gray-600">11 m<sup>2</sup></p>
                     </div>
                 </div>
-                <div class="bg-white shadow rounded-lg overflow-hidden">
-                    <img src="https://images.pexels.com/photos/186077/pexels-photo-186077.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Product Image" class="w-full h-48 object-cover">
-                    <div class="p-4">
-                        <h3 class="text-lg font-semibold mb-2">Product Title</h3>
-                        <p class="text-gray-600">$99.99</p>
-                        <span class="bg-green-200 text-green-800 text-xs font-semibold px-2 py-1 rounded">New Arrival</span>
+                <!-- Card 4 -->
+                <div class="bg-white shadow rounded-lg overflow-hidden transform hover:scale-105 transition duration-300 ease-in-out">
+                    <div class="relative inline-block">
+                        <span class="bg-green-200 text-green-800 text-xs font-semibold px-2 py-1 rounded absolute top-2 left-2">For Sale</span>
+                        <img src="https://images.pexels.com/photos/106399/pexels-photo-106399.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Product Image" class="w-full h-48 object-cover">
+                    </div>
+                     <div class="grid grid-cols-3  px-4 pt-1">
+                        <h3 class="text-md font-semibold mb-2">50,90 M Ft</h3>
+                        <h3 class="text-md font-semibold mb-2">Base area</h3>
+                        <h3 class="text-md font-semibold mb-2">Balcony</h3>
+                    </div>
+                    <div class="grid grid-cols-3 px-4 py-0">
+                        <h3>Szeged, Rákóczi utca 20</h3>
+                        <p class="text-gray-600">29 m<sup>2</sup></p>
+                        <p class="text-gray-600">11 m<sup>2</sup></p>
                     </div>
                 </div>
+                <!-- Card 5 -->
+                <div class="bg-white shadow rounded-lg overflow-hidden transform hover:scale-105 transition duration-300 ease-in-out">
+                    <div class="relative inline-block">
+                        <span class="bg-green-200 text-green-800 text-xs font-semibold px-2 py-1 rounded absolute top-2 left-2">For Sale</span>
+                        <img src="https://images.pexels.com/photos/3288102/pexels-photo-3288102.png?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Product Image" class="w-full h-48 object-cover">
+                    </div>
+                     <div class="grid grid-cols-3  px-4 pt-1">
+                        <h3 class="text-md font-semibold mb-2">50,90 M Ft</h3>
+                        <h3 class="text-md font-semibold mb-2">Base area</h3>
+                        <h3 class="text-md font-semibold mb-2">Balcony</h3>
+                    </div>
+                    <div class="grid grid-cols-3 px-4 py-0">
+                        <h3>Szeged, Rákóczi utca 20</h3>
+                        <p class="text-gray-600">29 m<sup>2</sup></p>
+                        <p class="text-gray-600">11 m<sup>2</sup></p>
+                    </div>
+                </div>
+                <!-- Card 6 -->
+                <div class="bg-white shadow rounded-lg overflow-hidden transform hover:scale-105 transition duration-300 ease-in-out">
+                    <div class="relative inline-block">
+                        <span class="bg-green-200 text-green-800 text-xs font-semibold px-2 py-1 rounded absolute top-2 left-2">For Rent</span>
+                        <img src="https://images.pexels.com/photos/280229/pexels-photo-280229.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Product Image" class="w-full h-48 object-cover">
+                    </div>
+                     <div class="grid grid-cols-3  px-4 pt-1">
+                        <h3 class="text-md font-semibold mb-2">120k Ft/month</h3>
+                        <h3 class="text-md font-semibold mb-2">Base area</h3>
+                        <h3 class="text-md font-semibold mb-2">Balcony</h3>
+                    </div>
+                    <div class="grid grid-cols-3 px-4 py-0">
+                        <h3>Szeged, Rákóczi utca 20</h3>
+                        <p class="text-gray-600">29 m<sup>2</sup></p>
+                        <p class="text-gray-600">11 m<sup>2</sup></p>
+                    </div>
+                </div>
+                <!-- Card 7 -->
+                <div class="bg-white shadow rounded-lg overflow-hidden transform hover:scale-105 transition duration-300 ease-in-out">
+                    <div class="relative inline-block">
+                        <span class="bg-green-200 text-green-800 text-xs font-semibold px-2 py-1 rounded absolute top-2 left-2">For Sale</span>
+                        <img src="https://images.pexels.com/photos/3623770/pexels-photo-3623770.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Product Image" class="w-full h-48 object-cover">
+                    </div>
+                    <div class="grid grid-cols-3 px-4 pt-1">
+                        <h3 class="text-md font-semibold mb-2">42,30 M Ft</h3>
+                        <h3 class="text-md font-semibold mb-2">Base area</h3>
+                        <h3 class="text-md font-semibold mb-2">Balcony</h3>
+                    </div>
+                    <div class="grid grid-cols-3 px-4 py-0">
+                        <h3>Szeged, Rákóczi utca 20</h3>
+                        <p class="text-gray-600">29 m<sup>2</sup></p>
+                        <p class="text-gray-600">11 m<sup>2</sup></p>
+                    </div>
+                </div>
+                <!-- Card 8 -->
+                <div class="bg-white shadow rounded-lg overflow-hidden transform hover:scale-105 transition duration-300 ease-in-out">
+                    <div class="relative inline-block">
+                        <span class="bg-green-200 text-green-800 text-xs font-semibold px-2 py-1 rounded absolute top-2 left-2">For Rent</span>
+                        <img src="https://images.pexels.com/photos/186077/pexels-photo-186077.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Product Image" class="w-full h-48 object-cover">
+                    </div>
+                    <div class="grid grid-cols-3 px-4 pt-1">
+                        <h3 class="text-md font-semibold mb-2">50,90 M Ft</h3>
+                        <h3 class="text-md font-semibold mb-2">Base area</h3>
+                        <h3 class="text-md font-semibold mb-2">Balcony</h3>
+                    </div>
+                    <div class="grid grid-cols-3 px-4 py-0">
+                        <h3>Szeged, Rákóczi utca 20</h3>
+                        <p class="text-gray-600">29 m<sup>2</sup></p>
+                        <p class="text-gray-600">11 m<sup>2</sup></p>
+                    </div>
+                </div>
+                <!-- Card 9 -->
+                <div class="bg-white shadow rounded-lg overflow-hidden transform hover:scale-105 transition duration-300 ease-in-out">
+                    <div class="relative inline-block">
+                        <span class="bg-green-200 text-green-800 text-xs font-semibold px-2 py-1 rounded absolute top-2 left-2">For Sale</span>
+                        <img src="https://images.pexels.com/photos/3209045/pexels-photo-3209045.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Product Image" class="w-full h-48 object-cover">
+                    </div>
+                    <div class="grid grid-cols-3 px-4 pt-1">
+                        <h3 class="text-md font-semibold mb-2">150k Ft/month</h3>
+                        <h3 class="text-md font-semibold mb-2">Base area</h3>
+                        <h3 class="text-md font-semibold mb-2">Balcony</h3>
+                    </div>
+                    <div class="grid grid-cols-3 px-4 py-0">
+                        <p>Szeged, Kossuth Lajos sugárút 20</p>
+                        <p class="text-gray-600">29 m<sup>2</sup></p>
+                        <p class="text-gray-600">11 m<sup>2</sup></p>
+                    </div>
+                </div>
+                <!-- Card 10 -->
+                <div class="bg-white shadow rounded-lg overflow-hidden transform hover:scale-105 transition duration-300 ease-in-out">
+                    <div class="relative inline-block">
+                        <span class="bg-green-200 text-green-800 text-xs font-semibold px-2 py-1 rounded absolute top-2 left-2">For Rent</span>
+                        <img src="https://images.pexels.com/photos/6283973/pexels-photo-6283973.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Product Image" class="w-full h-48 object-cover">
+                    </div>
+                    <div class="grid grid-cols-3 px-4 pt-1">
+                        <h3 class="text-md font-semibold mb-2">50,90 M Ft</h3>
+                        <h3 class="text-md font-semibold mb-2">Base area</h3>
+                        <h3 class="text-md font-semibold mb-2">Balcony</h3>
+                    </div>
+                    <div class="grid grid-cols-3 px-4 py-0">
+                        <h3>Szeged, Rákóczi utca 20</h3>
+                        <p class="text-gray-600">29 m<sup>2</sup></p>
+                        <p class="text-gray-600">11 m<sup>2</sup></p>
+                    </div>
+                </div>
+                <!-- Card 11 -->
+                <div class="bg-white shadow rounded-lg overflow-hidden transform hover:scale-105 transition duration-300 ease-in-out">
+                    <div class="relative inline-block">
+                        <span class="bg-green-200 text-green-800 text-xs font-semibold px-2 py-1 rounded absolute top-2 left-2">For Rent</span>
+                        <img src="https://images.pexels.com/photos/1571470/pexels-photo-1571470.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Product Image" class="w-full h-48 object-cover">
+                    </div>
+                    <div class="grid grid-cols-3 px-4 pt-1">
+                        <h3 class="text-md font-semibold mb-2">50,90 M Ft</h3>
+                        <h3 class="text-md font-semibold mb-2">Base area</h3>
+                        <h3 class="text-md font-semibold mb-2">Balcony</h3>
+                    </div>
+                    <div class="grid grid-cols-3 px-4 py-0">
+                        <h3>Szeged, Rákóczi utca 20</h3>
+                        <p class="text-gray-600">29 m<sup>2</sup></p>
+                        <p class="text-gray-600">11 m<sup>2</sup></p>
+                    </div>
+                </div>
+                <!-- Card 12 -->
+                <div class="bg-white shadow rounded-lg overflow-hidden transform hover:scale-105 transition duration-300 ease-in-out">
+                    <div class="relative inline-block">
+                        <span class="bg-green-200 text-green-800 text-xs font-semibold px-2 py-1 rounded absolute top-2 left-2">For Sale</span>
+                        <img src="https://images.pexels.com/photos/221024/pexels-photo-221024.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Product Image" class="w-full h-48 object-cover">
+                    </div>
+                    <div class="grid grid-cols-3 px-4 pt-1">
+                        <h3 class="text-md font-semibold mb-2">50,90 M Ft</h3>
+                        <h3 class="text-md font-semibold mb-2">Base area</h3>
+                        <h3 class="text-md font-semibold mb-2">Balcony</h3>
+                    </div>
+                    <div class="grid grid-cols-3 px-4 py-0">
+                        <h3>Szeged, Rákóczi utca 20</h3>
+                        <p class="text-gray-600">29 m<sup>2</sup></p>
+                        <p class="text-gray-600">11 m<sup>2</sup></p>
+                    </div>
+                </div>
+                <!-- Card 13 -->
+                <div class="bg-white shadow rounded-lg overflow-hidden transform hover:scale-105 transition duration-300 ease-in-out">
+                    <div class="relative inline-block">
+                        <span class="bg-green-200 text-green-800 text-xs font-semibold px-2 py-1 rounded absolute top-2 left-2">For Sale</span>
+                        <img src="https://images.pexels.com/photos/277667/pexels-photo-277667.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Product Image" class="w-full h-48 object-cover">
+                    </div>
+                    <div class="grid grid-cols-3 px-4 pt-1">
+                        <h3 class="text-md font-semibold mb-2">50,90 M Ft</h3>
+                        <h3 class="text-md font-semibold mb-2">Base area</h3>
+                        <h3 class="text-md font-semibold mb-2">Balcony</h3>
+                    </div>
+                    <div class="grid grid-cols-3 px-4 py-0">
+                        <h3>Szeged, Rákóczi utca 20</h3>
+                        <p class="text-gray-600">29 m<sup>2</sup></p>
+                        <p class="text-gray-600">11 m<sup>2</sup></p>
+                    </div>
+                </div>
+                <!-- Card 14 -->
+                <div class="bg-white shadow rounded-lg overflow-hidden transform hover:scale-105 transition duration-300 ease-in-out">
+                    <div class="relative inline-block">
+                        <span class="bg-green-200 text-green-800 text-xs font-semibold px-2 py-1 rounded absolute top-2 left-2">For Rent</span>
+                        <img src="https://images.pexels.com/photos/259593/pexels-photo-259593.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Product Image" class="w-full h-48 object-cover">
+                    </div>
+                    <div class="grid grid-cols-3 px-4 pt-1">
+                        <h3 class="text-md font-semibold mb-2">50,90 M Ft</h3>
+                        <h3 class="text-md font-semibold mb-2">Base area</h3>
+                        <h3 class="text-md font-semibold mb-2">Balcony</h3>
+                    </div>
+                    <div class="grid grid-cols-3 px-4 py-0">
+                        <h3>Szeged, Rákóczi utca 20</h3>
+                        <p class="text-gray-600">29 m<sup>2</sup></p>
+                        <p class="text-gray-600">11 m<sup>2</sup></p>
+                    </div>
+                </div>
+                <!-- Card 15 -->
+                <div class="bg-white shadow rounded-lg overflow-hidden transform hover:scale-105 transition duration-300 ease-in-out">
+                    <div class="relative inline-block">
+                        <span class="bg-green-200 text-green-800 text-xs font-semibold px-2 py-1 rounded absolute top-2 left-2">For Rent</span>
+                        <img src="https://images.pexels.com/photos/280232/pexels-photo-280232.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Product Image" class="w-full h-48 object-cover">
+                    </div>
+                    <div class="grid grid-cols-3 px-4 pt-1">
+                        <h3 class="text-md font-semibold mb-2">50,90 M Ft</h3>
+                        <h3 class="text-md font-semibold mb-2">Base area</h3>
+                        <h3 class="text-md font-semibold mb-2">Balcony</h3>
+                    </div>
+                    <div class="grid grid-cols-3 px-4 py-0">
+                        <h3>Szeged, Rákóczi utca 20</h3>
+                        <p class="text-gray-600">29 m<sup>2</sup></p>
+                        <p class="text-gray-600">11 m<sup>2</sup></p>
+                    </div>
+                </div>
+                <!-- Card 16 -->
+                <div class="bg-white shadow rounded-lg overflow-hidden transform hover:scale-105 transition duration-300 ease-in-out">
+                    <div class="relative inline-block">
+                        <span class="bg-green-200 text-green-800 text-xs font-semibold px-2 py-1 rounded absolute top-2 left-2">For Sale</span>
+                        <img src="https://images.pexels.com/photos/209315/pexels-photo-209315.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Product Image" class="w-full h-48 object-cover">
+                    </div>
+                    <div class="grid grid-cols-3 px-4 pt-1">
+                        <h3 class="text-md font-semibold mb-2">50,90 M Ft</h3>
+                        <h3 class="text-md font-semibold mb-2">Base area</h3>
+                        <h3 class="text-md font-semibold mb-2">Balcony</h3>
+                    </div>
+                    <div class="grid grid-cols-3 px-4 py-0">
+                        <h3>Szeged, Rákóczi utca 20</h3>
+                        <p class="text-gray-600">29 m<sup>2</sup></p>
+                        <p class="text-gray-600">11 m<sup>2</sup></p>
+                    </div>
+                </div>
+                <!-- Card 17 -->
+                <div class="bg-white shadow rounded-lg overflow-hidden transform hover:scale-105 transition duration-300 ease-in-out">
+                    <div class="relative inline-block">
+                        <span class="bg-green-200 text-green-800 text-xs font-semibold px-2 py-1 rounded absolute top-2 left-2">For Sale</span>
+                        <img src="https://images.pexels.com/photos/1438832/pexels-photo-1438832.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Product Image" class="w-full h-48 object-cover">
+                    </div>
+                    <div class="grid grid-cols-3 px-4 pt-1">
+                        <h3 class="text-md font-semibold mb-2">50,90 M Ft</h3>
+                        <h3 class="text-md font-semibold mb-2">Base area</h3>
+                        <h3 class="text-md font-semibold mb-2">Balcony</h3>
+                    </div>
+                    <div class="grid grid-cols-3 px-4 py-0">
+                        <h3>Szeged, Rákóczi utca 20</h3>
+                        <p class="text-gray-600">29 m<sup>2</sup></p>
+                        <p class="text-gray-600">11 m<sup>2</sup></p>
+                    </div>
+                </div>
+                
             </div>
         </main>
         <main class="p-6">
@@ -76,71 +340,81 @@
         
         <!-- Pagination Controls -->
         <div class="flex justify-center space-x-2">
-            <button id="prev" class="pagination-btn px-3 py-1 border rounded">Previous</button>
+            <button id="prev" class="pagination-btn px-3 py-1 border rounded" @click="changePage">Previous</button>
             <span id="page-indicator" class="font-semibold text-gray-700">Page 1</span>
-            <button id="next" class="pagination-btn px-3 py-1 border rounded">Next</button>
+            <button id="next" class="pagination-btn px-3 py-1 border rounded" @click="changePage">Next</button>
         </div>
     </main>
 </body>
 </template>
 
 <script>
-export default {
-    name: 'IndexPage'
-}
-// new Pagination({
-//             el: "#app",
-//             data() {
-//                 return {
-//                     items: Array.from({ length: 100 }, (_, i) => ({
-//                         title: `Product ${i + 1}`,
-//                         price: `$${(Math.random() * 100).toFixed(2)}`,
-//                         label: "New Arrival",
-//                         imageUrl: "https://via.placeholder.com/400"
-//                     })),
-//                     currentPage: 1,
-//                     itemsPerPage: 1 // Placeholder value, will update on mount
-//                 };
-//             },
-//             computed: {
-//                 paginatedItems() {
-//                     const start = (this.currentPage - 1) * this.itemsPerPage;
-//                     const end = start + this.itemsPerPage;
-//                     return this.items.slice(start, end);
-//                 }
-//             },
-//             methods: {
-//                 calculateItemsPerPage() {
-//                     const width = window.innerWidth;
-//                     if (width >= 1024) return 16;
-//                     if (width >= 768) return 9;
-//                     if (width >= 640) return 4;
-//                     return 1;
-//                 },
-//                 changePage(direction) {
-//                     const totalPages = Math.ceil(this.items.length / this.itemsPerPage);
-//                     if (direction === 'next' && this.currentPage < totalPages) {
-//                         this.currentPage++;
-//                     } else if (direction === 'prev' && this.currentPage > 1) {
-//                         this.currentPage--;
-//                     }
-//                 },
-//                 handleResize() {
-//                     const newItemsPerPage = this.calculateItemsPerPage();
-//                     if (newItemsPerPage !== this.itemsPerPage) {
-//                         this.itemsPerPage = newItemsPerPage;
-//                         this.currentPage = 1; // Reset to first page
-//                     }
-//                 }
-//             },
-//             mounted() {
-//                 // Set items per page based on initial window size
-//                 this.itemsPerPage = this.calculateItemsPerPage();
-//                 // Add resize listener to recalculate items per page on screen resize
-//                 window.addEventListener("resize", this.handleResize);
-//             },
-//             beforeDestroy() {
-//                 window.removeEventListener("resize", this.handleResize);
+// import { ref,computed } from 'vue';
+
+
+// const items = Array.from({ length: 100 }, (_, i) => ({
+//             title: `Product ${i + 1}`,
+//             price: `$${(Math.random() * 100).toFixed(2)}`,
+//             label: "New Arrival",
+//             imageUrl: "https://via.placeholder.com/400"
+//         }));
+
+//         let currentPage = 1;
+//         const itemsPerPage = calculateItemsPerPage();
+        
+//         function calculateItemsPerPage() {
+//             // Calculate number of items based on display width
+//             const width = window.innerWidth;
+//             if (width >= 1024) return 16;
+//             if (width >= 768) return 9;
+//             if (width >= 640) return 4;
+//             return 1;
+//         }
+
+//         function displayItems(page) {
+//             const container = document.getElementById("item-container");
+//             container.innerHTML = ""; // Clear previous items
+//             const start = (page - 1) * itemsPerPage;
+//             const end = start + itemsPerPage;
+//             const pageItems = items.slice(start, end);
+            
+//             pageItems.forEach(item => {
+//                 const itemDiv = document.createElement("div");
+//                 itemDiv.className = "bg-white shadow rounded-lg overflow-hidden";
+//                 itemDiv.innerHTML = `
+//                     <img src="${item.imageUrl}" alt="${item.title}" class="w-full h-48 object-cover">
+//                     <div class="p-4">
+//                         <h3 class="text-md font-semibold mb-2">${item.title}</h3>
+//                         <p class="text-gray-600">${item.price}</p>
+//                         <span class="bg-green-200 text-green-800 text-xs font-semibold px-2 py-1 rounded">${item.label}</span>
+//                     </div>
+//                 `;
+//                 container.appendChild(itemDiv);
+//             });
+
+//             document.getElementById("page-indicator").textContent = `Page ${page}`;
+//         }
+
+//         function changePage(direction) {
+//             const totalPages = Math.ceil(items.length / itemsPerPage);
+//             if (direction === 'next' && currentPage < totalPages) {
+//                 currentPage++;
+//             } else if (direction === 'prev' && currentPage > 1) {
+//                 currentPage--;
+//             }
+//             displayItems(currentPage);
+//         }
+
+//         // Initial page load
+//         displayItems(currentPage);
+
+
+//         // Adjust items per page on resize
+//         window.addEventListener("resize", () => {
+//             if (calculateItemsPerPage() !== itemsPerPage) {
+//                 location.reload(); // Reload to adapt to new screen size
 //             }
 //         });
+
+
 </script>
