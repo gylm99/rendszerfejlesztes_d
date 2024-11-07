@@ -3,8 +3,7 @@ using EstateSales.Backend.Repo.Base;
 
 namespace EstateSales.Backend.Repo
 {
-    public interface IUserRepo : IBaseRepo<User>
+    public interface IAdvertisementRepo:IBaseRepo<Advertisement>
     {
-        
     }
 }

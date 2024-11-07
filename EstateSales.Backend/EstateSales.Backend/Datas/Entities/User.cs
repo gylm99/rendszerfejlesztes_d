@@ -1,18 +1,15 @@
-﻿using static System.Runtime.InteropServices.JavaScript.JSType;
-using System.Xml.Linq;
-
-namespace EstateSales.Backend.Datas.Entities
+﻿namespace EstateSales.Backend.Datas.Entities
 {
-    public class User
+    public class User : IDbEntity<User>
     {
         public Guid Id { get; set; }
         public string Name { get; set; }
         public string Email { get; set; }
         public string Password { get; set; }
-        public int Number { get; set; }
+        public string Number { get; set; }
         public bool HasId => Id!=Guid.Empty;
 
-        public User(Guid id, string name, string email, string password, int number)
+        public User(Guid id, string name, string email, string password, string number)
         {
             Id = id;
             Name = name;
@@ -21,9 +18,9 @@ namespace EstateSales.Backend.Datas.Entities
             Number = number;
         }
 
-        public User(string name, string email, string password, int number)
+        public User(string name, string email, string password, string number)
         {
-             Id = new Guid();
+            Id = Guid.NewGuid();
             Name = name;
             Email = email;
             Password = password;
@@ -32,11 +29,11 @@ namespace EstateSales.Backend.Datas.Entities
 
         public User()
         {
-            Guid id = new Guid();
+            Id= new Guid();
             Name = string.Empty;
             Email = string.Empty;
             Password = string.Empty;
-            Number = 1;
+            Number = string.Empty;
         }
     }
 }

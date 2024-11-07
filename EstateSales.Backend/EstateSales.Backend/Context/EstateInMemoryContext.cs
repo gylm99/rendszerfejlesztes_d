@@ -2,9 +2,9 @@
 
 namespace EstateSales.Backend.Context
 {
-    public class EstateInMemoryContextcs:EstateContext
+    public class EstateInMemoryContext:EstateContext
     {
-        public EstateInMemoryContextcs(DbContextOptions options) : base(options)
+        public EstateInMemoryContext(DbContextOptions options) : base(options)
         {
         }
 

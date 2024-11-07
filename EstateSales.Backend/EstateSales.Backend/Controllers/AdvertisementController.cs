@@ -4,12 +4,11 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace EstateSales.Backend.Controllers
 {
-
     [ApiController]
     [Route("api/[controller]")]
-    public class UserController : BaseController<User>
+    public class AdvertisementController : BaseController<Advertisement>
     {
-        public UserController(IBaseRepo<User> repo) : base(repo)
+        public AdvertisementController(IBaseRepo<Advertisement> repo) : base(repo)
         {
         }
     }
