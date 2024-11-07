@@ -2,6 +2,9 @@
 using Microsoft.EntityFrameworkCore;
 using System.Linq.Expressions;
 
+
+//Megkötés arrol
+
 namespace EstateSales.Backend.Repo.Base
 {
     public static class QueryableExtension

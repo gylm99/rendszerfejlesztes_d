@@ -8,6 +8,8 @@ namespace EstateSales.Backend.BackendExtensions
 {
     public static class BackendExtensions
     {
+
+        //Fő program
         public static void ConfigureBackend(this IServiceCollection services)
         {
 
@@ -41,6 +43,7 @@ namespace EstateSales.Backend.BackendExtensions
         public static void ConfigureRepos (this IServiceCollection services)
         {
             services.AddScoped<IBaseRepo<User>, UserRepo<EstateInMemoryContext>>();
+            services.AddScoped<IBaseRepo<Advertisement>,AdvertisementRepo<EstateInMemoryContext>>();
             //services.AddScoped<IUserRepo, UserRepo<EstateInMemoryContext>>();
         }
     }

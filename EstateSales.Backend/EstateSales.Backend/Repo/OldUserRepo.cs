@@ -2,7 +2,7 @@
 using EstateSales.Backend.Datas.Entities;
 using EstateSales.Backend.Responses;
 using Microsoft.EntityFrameworkCore;
-
+//Ez már nem releváns
 namespace EstateSales.Backend.Repo
 {
     public class OldUserRepo 

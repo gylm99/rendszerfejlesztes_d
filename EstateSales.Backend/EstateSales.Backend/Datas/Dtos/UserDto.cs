@@ -1,5 +1,7 @@
 ﻿namespace EstateSales.Backend.Datas.Dtos
 {
+
+    // későbbi megvalósítás
     public class UserDto
     {
         public Guid Id { get; set; }

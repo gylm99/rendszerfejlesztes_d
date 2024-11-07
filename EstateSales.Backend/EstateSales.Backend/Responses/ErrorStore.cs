@@ -1,5 +1,7 @@
 ﻿namespace EstateSales.Backend.Responses
 {
+
+    //Controller Responsok
     public class ErrorStore
     {
         public string Error { get; set; } = string.Empty;

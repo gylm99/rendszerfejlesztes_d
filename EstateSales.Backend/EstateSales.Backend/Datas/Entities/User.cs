@@ -6,10 +6,10 @@
         public string Name { get; set; }
         public string Email { get; set; }
         public string Password { get; set; }
-        public int Number { get; set; }
+        public string Number { get; set; }
         public bool HasId => Id!=Guid.Empty;
 
-        public User(Guid id, string name, string email, string password, int number)
+        public User(Guid id, string name, string email, string password, string number)
         {
             Id = id;
             Name = name;
@@ -18,7 +18,7 @@
             Number = number;
         }
 
-        public User(string name, string email, string password, int number)
+        public User(string name, string email, string password, string number)
         {
             Id = Guid.NewGuid();
             Name = name;
@@ -33,7 +33,7 @@
             Name = string.Empty;
             Email = string.Empty;
             Password = string.Empty;
-            Number = 1;
+            Number = string.Empty;
         }
     }
 }
