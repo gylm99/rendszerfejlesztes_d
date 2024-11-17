@@ -4,8 +4,8 @@
         <header class="bg-white shadow py-4 px-6 flex items-center justify-between">
             <!-- Search Bar -->
             <div class="flex items-center w-full max-w-md">
-                <input type="text" placeholder="Search..." class="w-full px-4 py-2 border rounded-l-md border-gray-300 focus:outline-none focus:border-indigo-500">
-                <button class="bg-indigo-500 text-white px-4 py-2 rounded-r-md hover:bg-indigo-600 focus:outline-none">
+                <input type="text" placeholder="Search..." class="w-full px-4 py-2 border rounded-md border-green-300 focus:outline-none focus:border-green-800">
+                <button class="bg-green-600 text-white px-4 py-2 rounded-md hover:bg-green-900 focus:outline-none mx-5">
                     Filter
                 </button>
             </div>
@@ -14,10 +14,10 @@
             </div>
             <!-- Sign In / Register Buttons -->
             <div class="flex space-x-4">
-                <button class="px-4 py-2 bg-gray-300 text-gray-800 rounded-md hover:bg-gray-400 focus:outline-none">
+                <button class="px-4 py-2 bg-gray-300 text-gray-800 rounded-md hover:bg-gray-400 hover:text-white focus:outline-none">
                     Sign In
                 </button>
-                <button class="px-4 py-2 bg-indigo-500 text-white rounded-md hover:bg-indigo-600 focus:outline-none">
+                <button class="px-4 py-2 bg-green-600 text-white rounded-md hover:bg-green-900 focus:outline-none">
                     Register
                 </button>
             </div>
