@@ -9,5 +9,7 @@ namespace EstateSales.Backend.Repo
         public UserRepo(TDbContext? dbContext) : base(dbContext)
         {
         }
+
+       
     }
 }
