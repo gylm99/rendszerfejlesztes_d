@@ -1,4 +1,6 @@
+
 <template>
+
    <body class="bg-gray-100 h-screen">
         <!-- Header -->
         <header class="bg-white shadow py-4 px-6 flex items-center justify-between">
@@ -13,8 +15,8 @@
                 <h1 class="text-2xl font-semibold text-gray-800">Real Estate App</h1>
             </div>
             <!-- Sign In / Register Buttons -->
-            <div class="flex space-x-4">
-                <button class="px-4 py-2 bg-gray-300 text-gray-800 rounded-md hover:bg-gray-400 hover:text-white focus:outline-none">
+                <div class="flex space-x-4">
+                <button @click="isSignInActive = true" class="px-4 py-2 bg-gray-300 text-gray-800 rounded-md hover:bg-gray-400 hover:text-white focus:outline-none">
                     Sign In
                 </button>
                 <button class="px-4 py-2 bg-green-600 text-white rounded-md hover:bg-green-900 focus:outline-none">
@@ -348,73 +350,9 @@
 </body>
 </template>
 
+
 <script>
-// import { ref,computed } from 'vue';
 
-
-// const items = Array.from({ length: 100 }, (_, i) => ({
-//             title: `Product ${i + 1}`,
-//             price: `$${(Math.random() * 100).toFixed(2)}`,
-//             label: "New Arrival",
-//             imageUrl: "https://via.placeholder.com/400"
-//         }));
-
-//         let currentPage = 1;
-//         const itemsPerPage = calculateItemsPerPage();
-        
-//         function calculateItemsPerPage() {
-//             // Calculate number of items based on display width
-//             const width = window.innerWidth;
-//             if (width >= 1024) return 16;
-//             if (width >= 768) return 9;
-//             if (width >= 640) return 4;
-//             return 1;
-//         }
-
-//         function displayItems(page) {
-//             const container = document.getElementById("item-container");
-//             container.innerHTML = ""; // Clear previous items
-//             const start = (page - 1) * itemsPerPage;
-//             const end = start + itemsPerPage;
-//             const pageItems = items.slice(start, end);
-            
-//             pageItems.forEach(item => {
-//                 const itemDiv = document.createElement("div");
-//                 itemDiv.className = "bg-white shadow rounded-lg overflow-hidden";
-//                 itemDiv.innerHTML = `
-//                     <img src="${item.imageUrl}" alt="${item.title}" class="w-full h-48 object-cover">
-//                     <div class="p-4">
-//                         <h3 class="text-md font-semibold mb-2">${item.title}</h3>
-//                         <p class="text-gray-600">${item.price}</p>
-//                         <span class="bg-green-200 text-green-800 text-xs font-semibold px-2 py-1 rounded">${item.label}</span>
-//                     </div>
-//                 `;
-//                 container.appendChild(itemDiv);
-//             });
-
-//             document.getElementById("page-indicator").textContent = `Page ${page}`;
-//         }
-
-//         function changePage(direction) {
-//             const totalPages = Math.ceil(items.length / itemsPerPage);
-//             if (direction === 'next' && currentPage < totalPages) {
-//                 currentPage++;
-//             } else if (direction === 'prev' && currentPage > 1) {
-//                 currentPage--;
-//             }
-//             displayItems(currentPage);
-//         }
-
-//         // Initial page load
-//         displayItems(currentPage);
-
-
-//         // Adjust items per page on resize
-//         window.addEventListener("resize", () => {
-//             if (calculateItemsPerPage() !== itemsPerPage) {
-//                 location.reload(); // Reload to adapt to new screen size
-//             }
-//         });
 
 
 </script>

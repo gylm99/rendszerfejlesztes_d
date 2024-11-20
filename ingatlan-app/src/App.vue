@@ -1,20 +1,20 @@
 <template>
-  <!-- <IndexPage /> -->
+  <IndexPage />
   <!-- <SignIn /> -->
-   <SignUp/>
+   <!-- <SignUp/> -->
 </template>
 
 <script>
-// import IndexPage from './components/IndexPage.vue'
+import IndexPage from './components/IndexPage.vue'
 // import SignIn from './components/SignIn.vue'
-import SignUp from './components/SignUp.vue'
+// import SignUp from './components/SignUp.vue'
 
 export default {
   name: 'App',
   components: {
-    // IndexPage,
+    IndexPage,
     // SignIn,
-    SignUp
+    // SignUp
   }
 }
 </script>
