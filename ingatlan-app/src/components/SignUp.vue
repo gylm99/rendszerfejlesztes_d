@@ -1,5 +1,14 @@
 <template>
+  <!-- Header -->
+  <header class="bg-gray-100 py-4 px-6 flex items-center justify-center">
+            <!-- Search Bar -->
+<div class="flex items-center space-x-4">
+            <router-link to="/">
+                <h1 class="text-2xl font-semibold text-gray-800">Real Estate App</h1>
+            </router-link> 
+        </div>
 
+        </header>
 <body class="bg-gray-100 flex items-center justify-center min-h-screen">
     <div class="bg-white p-8 rounded-lg shadow-md w-full max-w-md">
         <h2 class="text-2xl font-bold text-green-600 mb-6 text-center">Regisztráció</h2>
