@@ -9,6 +9,7 @@
         public string Number { get; set; }
         public bool HasId => Id!=Guid.Empty;
         public ICollection<Advertisement> Advertisements { get; set; }
+        public ICollection<Message> Messages { get; set; }  
 
         public User(Guid id, string name, string email, string password, string number)
         {

@@ -8,6 +8,9 @@
         public DateTime CreatedAt { get; set; }
         public bool HasId => Id != Guid.Empty;
 
+        public Guid UserId { get; set; }
+        public User User { get; set; }
+
         public Message(Guid id, string senderEmailAddress, string content, DateTime createdAt)
         {
             Id = id;
