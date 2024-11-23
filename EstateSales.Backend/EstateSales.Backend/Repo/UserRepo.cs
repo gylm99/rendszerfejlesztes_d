@@ -1,6 +1,7 @@
 ﻿using EstateSales.Backend.Context;
 using EstateSales.Backend.Datas.Entities;
 using EstateSales.Backend.Repo.Base;
+using Mysqlx.Crud;
 
 namespace EstateSales.Backend.Repo
 {

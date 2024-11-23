@@ -2,6 +2,7 @@ using EstateSales.Backend.Context;
 using EstateSales.Backend.BackendExtensions;
 using EstateSales.Backend.Datas;
 using Microsoft.EntityFrameworkCore;
+using EstateSales.Backend.Datas.Entities;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -39,3 +40,4 @@ app.UseAuthorization();
 app.MapControllers();
 
 app.Run();
+app.MapIdentityApi<LoginUser>();

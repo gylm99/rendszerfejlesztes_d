@@ -8,6 +8,7 @@
         public string Password { get; set; }
         public string Number { get; set; }
         public bool HasId => Id!=Guid.Empty;
+        public ICollection<Advertisement> Advertisements { get; set; }
 
         public User(Guid id, string name, string email, string password, string number)
         {

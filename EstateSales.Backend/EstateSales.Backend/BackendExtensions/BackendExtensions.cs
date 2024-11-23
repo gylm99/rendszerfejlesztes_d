@@ -37,8 +37,14 @@ namespace EstateSales.Backend.BackendExtensions
             service.AddDbContext<EstateMySqlContext>(options => options.UseMySQL(connectionString));
         }
 
+        public static void ConfigurMysqlIdentityContext(this IServiceCollection services)
+        {
+            string connectionString = "server=localhost;userid=root;password=;database=real_estate_sale_db;port=3306";
+            services.AddDbContext<EstateMySqlIdentityContext>(options => options.UseMySQL(connectionString));
+        }
 
-            public static void ConfigureInMemoryContext(this IServiceCollection services) 
+
+        public static void ConfigureInMemoryContext(this IServiceCollection services) 
         {
             string dbNameInMemoryContext = "Estate" + Guid.NewGuid();
             services.AddDbContext<EstateInMemoryContext>(
@@ -50,17 +56,19 @@ namespace EstateSales.Backend.BackendExtensions
         }
         public static void ConfigureRepos (this IServiceCollection services)
         {
-            bool test=false;
+            bool test=true;
             if (test)
             {
                 services.AddScoped<IBaseRepo<User>, UserRepo<EstateInMemoryContext>>();
                 services.AddScoped<IBaseRepo<Advertisement>, AdvertisementRepo<EstateInMemoryContext>>();
+                services.AddScoped<IBaseRepo<Message>, MessageRepo<EstateInMemoryContext>>();
                 //services.AddScoped<IUserRepo, UserRepo<EstateInMemoryContext>>();
             }
             else
             {
                 services.AddScoped<IBaseRepo<User>, UserRepo<EstateMySqlContext>>();
                 services.AddScoped<IBaseRepo<Advertisement>, AdvertisementRepo<EstateMySqlContext>>();
+                services.AddScoped<IBaseRepo<Message>,MessageRepo<EstateMySqlContext>>();
             }
         }
     }

@@ -10,7 +10,7 @@ namespace EstateSales.Backend.Repo.Base
         where TEntity : class, IDbEntity<TEntity>, new()
     {
         private readonly DbContext? _dbContext;
-        private readonly DbSet<TEntity>? _dbSet;
+        protected readonly DbSet<TEntity>? _dbSet;
 
         public BaseRepo(TDbContext? dbContext)
         {
