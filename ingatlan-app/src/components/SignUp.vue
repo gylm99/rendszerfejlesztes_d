@@ -11,22 +11,22 @@
         </header>
 <body class="bg-gray-100 flex items-center justify-center min-h-screen">
     <div class="bg-white p-8 rounded-lg shadow-md w-full max-w-md">
-        <h2 class="text-2xl font-bold text-green-600 mb-6 text-center">Regisztráció</h2>
+        <h2 class="text-2xl font-bold text-green-600 mb-6 text-center">Registration</h2>
         <form action="#" method="POST">
             <div class="mb-6">
-                <label for="name" name="name" class="block text-sm font-medium text-gray-700">Jelszó megerősítése</label>
+                <label for="name" name="name" class="block text-sm font-medium text-gray-700">Name</label>
                 <input 
-                    type="password" 
-                    id="confirm-password" 
-                    name="confirm-password" 
+                    type="text" 
+                    id="name" 
+                    name="name" 
                     class="mt-1 p-2 w-full border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-green-500" 
-                    placeholder="••••••••" 
+                    placeholder="Your full name" 
                     required
                 >
             </div>
             <!-- E-mail mező -->
             <div class="mb-4">
-                <label for="email" class="block text-sm font-medium text-gray-700">E-mail cím</label>
+                <label for="email" class="block text-sm font-medium text-gray-700">E-mail</label>
                 <input 
                     type="email" 
                     id="email" 
@@ -38,7 +38,7 @@
             </div>
             <!-- Jelszó mező -->
             <div class="mb-4">
-                <label for="password" class="block text-sm font-medium text-gray-700">Jelszó</label>
+                <label for="password" class="block text-sm font-medium text-gray-700">Password</label>
                 <input 
                     type="password" 
                     id="password" 
@@ -50,17 +50,17 @@
             </div>
             <!-- Jelszó megerősítése -->
             <div class="mb-6">
-                <label for="confirm-password" class="block text-sm font-medium text-gray-700">Jelszó megerősítése</label>
+                <label for="confirm-password" class="block text-sm font-medium text-gray-700">Password confirmation</label>
                 <input type="password" id="confirm-password" name="confirm-password" class="mt-1 p-2 w-full border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-green-500" placeholder="••••••••" required>
             </div>
             <div class="mb-6">
-                <label for="phone" name="phone" class="block text-sm font-medium text-gray-700">Jelszó megerősítése</label>
+                <label for="phone" name="phone" class="block text-sm font-medium text-gray-700">Phone number</label>
                 <input 
-                    type="password" 
+                    type="text" 
                     id="confirm-password" 
                     name="confirm-password" 
                     class="mt-1 p-2 w-full border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-green-500" 
-                    placeholder="••••••••" 
+                    placeholder="+36 30 123 4567" 
                     required
                 >
             </div>

@@ -1,4 +1,5 @@
 <template>
+    <router-link to="/item">
     <div class="bg-white shadow rounded-lg overflow-hidden transform hover:scale-105 transition duration-300 ease-in-out">
                     <div class="relative inline-block">
                         <span class="bg-green-200 text-green-800 text-xs font-semibold px-2 py-1 rounded absolute top-2 left-2">For Sale</span>
@@ -15,6 +16,8 @@
                         <p class="text-gray-600">11 m<sup>2</sup></p>
                     </div>
                 </div>
+            </router-link>
+                <router-view/>
 </template>
 
 <script>
