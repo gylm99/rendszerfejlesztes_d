@@ -17,7 +17,7 @@ export default {
       signOut,
     };
   },
-  name: "NavBar",
+  name: "NavBar"
 };
 </script>
 
@@ -96,10 +96,10 @@ export default {
                   Messages
                 </router-link>
                 <router-link
-                  to="/advertisements"
+                  to="/itemupload"
                   class="block px-4 py-2 text-gray-700 hover:bg-gray-200"
                 >
-                  Advertisements
+                  Upload advertisement
                 </router-link>
                 <router-link
                   to="/profile"
