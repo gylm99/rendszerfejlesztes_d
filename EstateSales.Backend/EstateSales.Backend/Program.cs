@@ -34,6 +34,7 @@ using(var scope = app.Services.CreateAsyncScope())
 app.UseCors("EstateCors");
 
 app.UseHttpsRedirection();
+app.UseStaticFiles();
 
 app.UseAuthorization();
 
@@ -41,3 +42,4 @@ app.MapControllers();
 
 app.Run();
 app.MapIdentityApi<LoginUser>();
+app.UseDeveloperExceptionPage();

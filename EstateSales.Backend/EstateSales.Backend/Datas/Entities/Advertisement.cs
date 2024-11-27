@@ -19,6 +19,10 @@ namespace EstateSales.Backend.Datas.Entities
         public bool HasElevator { get; set; }=false;
         public string Orientation { get; set; }
 
+        // FOTOK tarolasa
+
+        public List<string> PhotosPath { get; set; } = new List<string>();
+
 
         // backendhez szügséges propok
         public bool HasId => Id != Guid.Empty;
@@ -26,10 +30,11 @@ namespace EstateSales.Backend.Datas.Entities
         //ab kapcsolat
         public Guid UserId { get; set; }
         public User User { get; set; }
+      
 
         public Advertisement(Guid id, string title, double price, double baseArea,
             int roomNumber, string description, int builtYear, string confort, int floorLevel, 
-            int mainBuildingFloorLevel, bool hasElevator, string orientation)
+            int mainBuildingFloorLevel, bool hasElevator, string orientation,List<string> photosPath)
         {
             Id = id;
             Title = title;
@@ -43,11 +48,12 @@ namespace EstateSales.Backend.Datas.Entities
             MainBuildingFloorLevel = mainBuildingFloorLevel;
             HasElevator = hasElevator;
             Orientation = orientation;
+            PhotosPath = photosPath;
         }
 
         public Advertisement(string title, double price, double baseArea, int roomNumber,
             string description, int builtYear, string confort, int floorLevel, int mainBuildingFloorLevel,
-            bool hasElevator, string orientation)
+            bool hasElevator, string orientation,List<string> photosPath)
         {
             Id= Guid.NewGuid();
             Title = title;
@@ -61,6 +67,7 @@ namespace EstateSales.Backend.Datas.Entities
             MainBuildingFloorLevel = mainBuildingFloorLevel;
             HasElevator = hasElevator;
             Orientation = orientation;
+            PhotosPath = photosPath;
         }
 
         public Advertisement()
@@ -76,6 +83,7 @@ namespace EstateSales.Backend.Datas.Entities
             MainBuildingFloorLevel = 0;
             HasElevator = false;
             Orientation = string.Empty;
+            PhotosPath=new List<string>();
 
         }
     }

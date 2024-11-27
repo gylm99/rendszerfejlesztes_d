@@ -54,6 +54,10 @@ namespace EstateSales.Backend.BackendExtensions
                  ServiceLifetime.Scoped
             );
         }
+
+
+      
+
         public static void ConfigureRepos (this IServiceCollection services)
         {
             bool test=true;

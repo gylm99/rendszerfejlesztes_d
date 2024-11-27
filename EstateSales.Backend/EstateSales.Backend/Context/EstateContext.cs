@@ -25,7 +25,15 @@ namespace EstateSales.Backend.Context
             modelBuilder.Entity<Message>().HasOne(mes=>mes.User).WithMany(u=>u.Messages).HasForeignKey(msg=>msg.UserId)
                 .OnDelete(deleteBehavior: DeleteBehavior.Cascade);
 
-            
+
+            modelBuilder.Entity<Advertisement>()
+                .Property(a => a.PhotosPath)
+                .HasConversion(
+                    v => Newtonsoft.Json.JsonConvert.SerializeObject(v),
+                    v => Newtonsoft.Json.JsonConvert.DeserializeObject<List<string>>(v)
+                );
+
+
             base.OnModelCreating(modelBuilder);
         }
     }
