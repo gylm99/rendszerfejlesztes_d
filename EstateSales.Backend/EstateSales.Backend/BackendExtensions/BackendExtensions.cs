@@ -13,8 +13,9 @@ namespace EstateSales.Backend.BackendExtensions
         public static void ConfigureBackend(this IServiceCollection services)
         {
 
-            services.AddCors();
+            services.ConfigureCors();
             services.ConfigureInMemoryContext();
+            services.ConfigureMysqLContext();
             services.ConfigureRepos();
         }
         public static void ConfigureCors(this IServiceCollection service)
@@ -27,8 +28,21 @@ namespace EstateSales.Backend.BackendExtensions
                 }
                 )
             );
-         
+        
         }
+
+        public static void ConfigureMysqLContext(this IServiceCollection service)
+        {
+            string connectionString = "server=localhost;userid=root;password=;database=real_estate_sale_db;port=3306";
+            service.AddDbContext<EstateMySqlContext>(options => options.UseMySQL(connectionString));
+        }
+
+        public static void ConfigurMysqlIdentityContext(this IServiceCollection services)
+        {
+            string connectionString = "server=localhost;userid=root;password=;database=real_estate_sale_db;port=3306";
+            services.AddDbContext<EstateMySqlIdentityContext>(options => options.UseMySQL(connectionString));
+        }
+
 
         public static void ConfigureInMemoryContext(this IServiceCollection services) 
         {
@@ -40,11 +54,26 @@ namespace EstateSales.Backend.BackendExtensions
                  ServiceLifetime.Scoped
             );
         }
+
+
+      
+
         public static void ConfigureRepos (this IServiceCollection services)
         {
-            services.AddScoped<IBaseRepo<User>, UserRepo<EstateInMemoryContext>>();
-            services.AddScoped<IBaseRepo<Advertisement>,AdvertisementRepo<EstateInMemoryContext>>();
-            //services.AddScoped<IUserRepo, UserRepo<EstateInMemoryContext>>();
+            bool test=true;
+            if (test)
+            {
+                services.AddScoped<IBaseRepo<User>, UserRepo<EstateInMemoryContext>>();
+                services.AddScoped<IBaseRepo<Advertisement>, AdvertisementRepo<EstateInMemoryContext>>();
+                services.AddScoped<IBaseRepo<Message>, MessageRepo<EstateInMemoryContext>>();
+                //services.AddScoped<IUserRepo, UserRepo<EstateInMemoryContext>>();
+            }
+            else
+            {
+                services.AddScoped<IBaseRepo<User>, UserRepo<EstateMySqlContext>>();
+                services.AddScoped<IBaseRepo<Advertisement>, AdvertisementRepo<EstateMySqlContext>>();
+                services.AddScoped<IBaseRepo<Message>,MessageRepo<EstateMySqlContext>>();
+            }
         }
     }
 }

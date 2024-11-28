@@ -4,7 +4,8 @@ namespace EstateSales.Backend.Context
 {
     public class EstateInMemoryContext:EstateContext
     {
-        public EstateInMemoryContext(DbContextOptions options) : base(options)
+        public EstateInMemoryContext(DbContextOptions<EstateInMemoryContext> options) : base(options)
+            
         {
         }
 
