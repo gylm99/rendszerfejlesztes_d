@@ -22,8 +22,8 @@
         public Message()
         {
             Id = Guid.NewGuid();
-            Content=String.Empty;
-            SenderEmailAddress = String.Empty;
+            Content=string.Empty;
+            SenderEmailAddress = string.Empty;
             CreatedAt = DateTime.Now;
         }
         public Message( string senderEmailAddress, string content, DateTime createdAt)

@@ -3,6 +3,7 @@ using System;
 using EstateSales.Backend.Context;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -10,9 +11,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace EstateSales.Backend.Migrations
 {
     [DbContext(typeof(EstateMySqlContext))]
-    partial class EstateMySqlContextModelSnapshot : ModelSnapshot
+    [Migration("20241128215457_m2-Advertisement_frissitve")]
+    partial class m2Advertisement_frissitve
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
