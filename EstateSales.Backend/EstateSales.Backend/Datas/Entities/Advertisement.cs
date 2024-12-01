@@ -21,7 +21,7 @@ namespace EstateSales.Backend.Datas.Entities
 
         // FOTOK tarolasa
 
-        public List<string> PhotosPath { get; set; } = new List<string>();
+        public ICollection<Photo> Photos { get; set; } = new List<Photo>();
 
 
         // backendhez szügséges propok
@@ -34,7 +34,7 @@ namespace EstateSales.Backend.Datas.Entities
 
         public Advertisement(Guid id, string title, double price, double baseArea,
             int roomNumber, string description, int builtYear, string confort, int floorLevel, 
-            int mainBuildingFloorLevel, bool hasElevator, string orientation,List<string> photosPath)
+            int mainBuildingFloorLevel, bool hasElevator, string orientation,List<Photo> photosPath)
         {
             Id = id;
             Title = title;
@@ -48,12 +48,12 @@ namespace EstateSales.Backend.Datas.Entities
             MainBuildingFloorLevel = mainBuildingFloorLevel;
             HasElevator = hasElevator;
             Orientation = orientation;
-            PhotosPath = photosPath;
+            Photos = photosPath;
         }
 
         public Advertisement(string title, double price, double baseArea, int roomNumber,
             string description, int builtYear, string confort, int floorLevel, int mainBuildingFloorLevel,
-            bool hasElevator, string orientation,List<string> photosPath)
+            bool hasElevator, string orientation,List<Photo> photosPath)
         {
             Id= Guid.NewGuid();
             Title = title;
@@ -67,7 +67,7 @@ namespace EstateSales.Backend.Datas.Entities
             MainBuildingFloorLevel = mainBuildingFloorLevel;
             HasElevator = hasElevator;
             Orientation = orientation;
-            PhotosPath = photosPath;
+            Photos = photosPath;
         }
 
         public Advertisement()
@@ -83,7 +83,7 @@ namespace EstateSales.Backend.Datas.Entities
             MainBuildingFloorLevel = 0;
             HasElevator = false;
             Orientation = string.Empty;
-            PhotosPath=new List<string>();
+            Photos=new List<Photo>();
 
         }
     }

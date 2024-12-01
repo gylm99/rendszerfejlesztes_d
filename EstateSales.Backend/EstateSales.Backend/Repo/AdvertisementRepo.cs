@@ -18,6 +18,19 @@ namespace EstateSales.Backend.Repo
             return await _dbSet!.SelectAll().Include(x => x.User).ToListAsync();
         }
 
-        
+        public async Task<Advertisement?> GetAdvertisementWithPhotosAsync(Guid advertisementId)
+        {
+            var advertisement= await _dbSet.Include(a => a.Photos) 
+                .FirstOrDefaultAsync(a => a.Id == advertisementId);
+            if (advertisement == null)
+            {
+                throw new InvalidOperationException("A hirdetés nem található az adatbázisban.");
+            }
+            return advertisement;
+        }
+
+ 
+
+
     }
 }

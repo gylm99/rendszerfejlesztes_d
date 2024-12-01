@@ -81,6 +81,7 @@ namespace EstateSales.Backend.Context
             modelBuilder.Entity<User>().HasData(users);
             modelBuilder.Entity<Advertisement>().HasData(advertisements);
             modelBuilder.Entity<Message>().HasData(messages);
+           
 
           
         }

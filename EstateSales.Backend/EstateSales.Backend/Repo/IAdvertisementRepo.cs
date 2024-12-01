@@ -5,5 +5,7 @@ namespace EstateSales.Backend.Repo
 {
     public interface IAdvertisementRepo:IBaseRepo<Advertisement>
     {
+        Task<Advertisement?> GetAdvertisementWithPhotosAsync(Guid advertisementId);
+        //Task<int> GetTotalPhotoCountAsync();
     }
 }
