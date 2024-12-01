@@ -29,7 +29,14 @@ namespace EstateSales.Backend.Repo
             return advertisement;
         }
 
- 
+        public async Task<List<Advertisement>> GetAllAdvertisementsWithPhotosAsync()
+        {
+            return await _dbSet
+                .Include(a => a.Photos)
+                .ToListAsync();
+        }
+
+
 
 
     }

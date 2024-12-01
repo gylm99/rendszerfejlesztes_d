@@ -124,7 +124,7 @@ namespace EstateSales.Backend.Controllers
                 return Ok(advertisement);
             }
 
-
+        // teszteléshez
         [HttpGet("photos/count")]
         public async Task<IActionResult> GetTotalPhotoCount()
         {
@@ -133,9 +133,18 @@ namespace EstateSales.Backend.Controllers
         }
 
 
+        [HttpGet("all")]
+        public async Task<IActionResult> GetAllAdvertisementsWithPhotos()
+        {
+            var advertisements = await _advertisementRepo.GetAllAdvertisementsWithPhotosAsync();
+            return Ok(advertisements);
+        }
+
+
+
 
 
 
 
     }
- }
+}
