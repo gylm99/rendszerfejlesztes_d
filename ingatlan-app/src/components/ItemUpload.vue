@@ -1,6 +1,5 @@
 <template>
     <div class="map-container">
-      <!-- Input Field for Location -->
       <div class="mb-4">
         <input
           type="text"
@@ -16,7 +15,6 @@
         </button>
       </div>
   
-      <!-- Map -->
       <div id="map" class="map"></div>
     </div>
   </template>
@@ -30,7 +28,7 @@
       return {
         map: null,
         marker: null,
-        address: "", // User's input for address
+        address: "", 
       };
     },
     mounted() {
@@ -38,15 +36,12 @@
     },
     methods: {
       initMap() {
-        // Initialize the map with a default view
         this.map = L.map("map").setView([51.505, -0.09], 13);
   
-        // Add OpenStreetMap tiles
         L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
           attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
         }).addTo(this.map);
   
-        // Add a default marker
         this.marker = L.marker([51.505, -0.09]).addTo(this.map).bindPopup("Default Location").openPopup();
       },
       async updateMapLocation() {
@@ -56,7 +51,6 @@
         }
   
         try {
-          // Fetch coordinates from Nominatim API
           const response = await fetch(
             `https://nominatim.openstreetmap.org/search?q=${encodeURIComponent(this.address)}&format=json`
           );
@@ -67,10 +61,8 @@
             return;
           }
   
-          // Extract latitude and longitude from the API response
           const { lat, lon } = data[0];
   
-          // Update the map's view and marker location
           const latLng = [parseFloat(lat), parseFloat(lon)];
           this.map.setView(latLng, 13);
           this.marker.setLatLng(latLng).bindPopup(this.address).openPopup();

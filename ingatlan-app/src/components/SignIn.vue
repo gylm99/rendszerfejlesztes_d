@@ -1,6 +1,5 @@
 <template>
       <header class="bg-gray-100 py-4 px-6 flex items-center justify-center">
-            <!-- Search Bar -->
             <div>
             <router-link to="/">
                 <h1 class="text-2xl font-semibold text-gray-800">Real Estate App</h1>

@@ -22,9 +22,7 @@ export default {
 </script>
 
 <template>
-      <!-- Header -->
       <header class="bg-white shadow py-4 px-6 flex items-center justify-between">
-        <!-- Search Bar -->
         <div class="flex items-center w-full max-w-md">
           <input
             type="text"
@@ -38,15 +36,12 @@ export default {
           </button>
         </div>
   
-        <!-- Logo -->
         <router-link to="/">
           <h1 class="text-2xl font-semibold text-gray-800">Real Estate App</h1>
         </router-link>
   
-        <!-- Navbar Buttons -->
         <div class="flex space-x-4">
           <template v-if="!auth.user">
-            <!-- Sign In / Register Buttons -->
             <router-link to="/signin">
               <button
                 @click="isSignInActive = true"
@@ -64,7 +59,6 @@ export default {
             </router-link>
           </template>
           <template v-else>
-            <!-- User Dropdown Menu -->
             <div class="relative">
               <button
                 @click="toggleDropdown"
@@ -84,7 +78,6 @@ export default {
                 {{ auth.user.username }}
               </button>
   
-              <!-- Dropdown Menu -->
               <div
                 v-if="dropdownOpen"
                 class="absolute right-0 mt-2 w-48 bg-gray-100 rounded-md shadow-lg z-50"

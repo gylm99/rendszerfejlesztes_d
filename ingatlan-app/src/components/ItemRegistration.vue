@@ -2,7 +2,6 @@
     <div class="bg-white rounded shadow p-6 space-y-6">
       <h1 class="text-2xl font-bold text-green-600">Advertisement Registration</h1>
   
-      <!-- Picture Upload -->
       <div>
         <label class="block text-gray-700 font-bold mb-2">Upload Pictures</label>
         <input
@@ -28,7 +27,6 @@
         </div>
       </div>
   
-      <!-- Price and Basic Details -->
       <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
         <div>
           <label class="block text-gray-700 font-bold mb-2">Price (Ft)</label>
@@ -64,7 +62,6 @@
         </div>
       </div>
   
-      <!-- Dropdowns -->
       <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
         <div>
           <label class="block text-gray-700 font-bold mb-2">Condition</label>
@@ -111,7 +108,6 @@
         </div>
       </div>
   
-      <!-- Description -->
       <div>
         <label class="block text-gray-700 font-bold mb-2">Description</label>
         <textarea
@@ -121,7 +117,6 @@
         ></textarea>
       </div>
   
-      <!-- Address -->
       <div>
         <label class="block text-gray-700 font-bold mb-2">Address</label>
         <input
@@ -131,7 +126,6 @@
         />
       </div>
   
-      <!-- Submit Button -->
       <div class="text-right">
         <button
           class="bg-green-600 hover:bg-green-700 text-white font-bold py-2 px-4 rounded"

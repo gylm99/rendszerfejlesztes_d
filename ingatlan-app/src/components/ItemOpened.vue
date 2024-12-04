@@ -1,7 +1,6 @@
 
     <template>
         <header class="bg-gray-100 py-4 px-6 flex items-center justify-center">
-            <!-- Search Bar -->
 <div class="flex items-center space-x-4">
             <router-link to="/">
                 <h1 class="text-2xl font-semibold text-gray-800">Real Estate App</h1>
@@ -12,13 +11,11 @@
     <div class="bg-gray-100 p-4">
       <div class="max-w-5xl mx-auto bg-white rounded shadow p-6 space-y-6
       ">
-        <!-- Title Section -->
         <div>
           <h1 class="text-2xl font-bold text-green-700">{{ propertyTitle }}</h1>
           <h2 class="text-lg text-gray-500 mt-2">{{ propertyLocation }}</h2>
         </div>
   
-        <!-- Image Grid -->
         <div class="grid grid-cols-3 ">
           <div class="col-span-2">
             <img :src="largeImage" alt="Large" class="rounded shadow">
@@ -34,7 +31,6 @@
           </div>
         </div>
   
-        <!-- Price, Area, Rooms -->
         <div class="grid grid-cols-3 gap-4 text-center mt-4">
           <div>
             <p class="text-lg font-bold text-green-700">Price</p>
@@ -50,7 +46,6 @@
           </div>
         </div>
   
-        <!-- Details Section -->
         <div class="space-y-2">
           <h3 class="text-xl font-bold text-green-700">Details</h3>
           <ul class="text-gray-600 space-y-1">
@@ -60,13 +55,11 @@
           </ul>
         </div>
   
-        <!-- Description Section -->
         <div>
           <h3 class="text-xl font-bold text-green-700">Description</h3>
           <p class="text-gray-600 mt-2">{{ description }}</p>
         </div>
   
-        <!-- Map Section -->
         <div>
           <h3 class="text-xl font-bold text-green-700">Map</h3>
           <div class="mt-4">
@@ -82,7 +75,6 @@
         </div>
       </div>
   
-      <!-- Modal for Viewing All Images -->
       <div
         class="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center"
         v-show="showModal"

@@ -15,7 +15,6 @@ export default {
 
 <template>
   <NavBar />
-        <!-- Content Grid -->
         <main class="p-6">
             <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
                 <!-- Card 1 -->
@@ -60,7 +59,6 @@ export default {
         <main class="p-6">
         <div id="ItemShow-container" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mb-6"></div>
         
-        <!-- Pagination Controls -->
         <div class="flex justify-center space-x-2">
             <button id="prev" class="pagination-btn px-3 py-1 border rounded" @click="changePage">Previous</button>
             <span id="page-indicator" class="font-semibold text-gray-700">Page 1</span>
