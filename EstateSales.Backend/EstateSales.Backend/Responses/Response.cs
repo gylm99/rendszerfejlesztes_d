@@ -1,10 +1,14 @@
 ﻿namespace EstateSales.Backend.Responses
 {
-    public class Responsee:ErrorStore
+    public class Response:ErrorStore
     {
+        public Response(string error)
+        {
+            Error = error;
+        }
+        public Response() : base() { }
         public Guid Id { get; set; }
-        public bool IsSucces => !HasError;
+        public bool IsSuccess => !HasError;
 
-        public Responsee() : base() { }
     }
 }

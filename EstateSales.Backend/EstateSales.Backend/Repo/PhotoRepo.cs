@@ -14,9 +14,9 @@ namespace EstateSales.Backend.Repo
         {
             _dbcontext = dbContext;
         }
-        public async Task<Responsee> CreatePhotoAsync(Photo photo)
+        public async Task<Response> CreatePhotoAsync(Photo photo)
         {
-           Responsee response = new Responsee();
+           Response response = new Response();
 
 
             if (photo == null) 

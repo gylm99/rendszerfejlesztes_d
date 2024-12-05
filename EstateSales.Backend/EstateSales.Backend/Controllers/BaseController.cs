@@ -48,7 +48,7 @@ namespace EstateSales.Backend.Controllers
         [HttpPut]
         public async Task<IActionResult> UpdateAsync(TEntity entity)
         {
-            Responsee response = new Responsee();
+            Response response = new Response();
 
             if(_repo is not null)
             {
@@ -75,7 +75,7 @@ namespace EstateSales.Backend.Controllers
         [HttpDelete("{id}")]
         public async Task<ActionResult> DeleteAsync(Guid id)
         {
-            Responsee response = new Responsee();
+            Response response = new Response();
             if (_repo is not null)
             {
                 response = await _repo.DeleteAsync(id);
@@ -98,7 +98,7 @@ namespace EstateSales.Backend.Controllers
         [HttpPost]
         public async Task<IActionResult> InsertAsync(TEntity entity)
         {
-            Responsee response = new Responsee();
+            Response response = new Response();
             if (entity is not null)
             {
                 response = await _repo.CreateAsync(entity);

@@ -25,7 +25,7 @@ namespace EstateSales.Backend.Controllers
                 [FromForm] Guid userId
                 )
             {
-                Responsee responsee = new Responsee();
+                Response responsee = new Response();
                 Message message = new Message
                 {
                     SenderEmailAddress = senderEmailAddress,

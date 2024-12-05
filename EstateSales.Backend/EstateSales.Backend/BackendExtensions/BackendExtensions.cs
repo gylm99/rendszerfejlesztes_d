@@ -2,21 +2,30 @@
 using EstateSales.Backend.Datas.Entities;
 using EstateSales.Backend.Repo;
 using EstateSales.Backend.Repo.Base;
+using EstateSales.Backend.Services.Email;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Identity.UI.Services;
 using Microsoft.EntityFrameworkCore;
 
 namespace EstateSales.Backend.BackendExtensions
 {
+    public enum SelectedDatabase { InMemory, MySql }
     public static class BackendExtensions
     {
-
-        //Fő program
+        
+        public static SelectedDatabase _selectedDatabase=SelectedDatabase.MySql;
         public static void ConfigureBackend(this IServiceCollection services)
         {
-
+            
             services.ConfigureCors();
             services.ConfigureInMemoryContext();
-            services.ConfigureMysqLContext();
+            services.ConfigureInMemoryIdentityContext();
+            services.ConfigureMysqlContext();
+            services.ConfigureMysqlIdentityContext();            
             services.ConfigureRepos();
+            services.ConfigureServices();
+
+            services.AddAuthenticationServices();
         }
         public static void ConfigureCors(this IServiceCollection service)
         {
@@ -31,13 +40,13 @@ namespace EstateSales.Backend.BackendExtensions
         
         }
 
-        public static void ConfigureMysqLContext(this IServiceCollection service)
+        public static void ConfigureMysqlContext(this IServiceCollection service)
         {
             string connectionString = "server=localhost;userid=root;password=;database=real_estate_sale_db;port=3306";
             service.AddDbContext<EstateMySqlContext>(options => options.UseMySQL(connectionString));
         }
 
-        public static void ConfigurMysqlIdentityContext(this IServiceCollection services)
+        public static void ConfigureMysqlIdentityContext(this IServiceCollection services)
         {
             string connectionString = "server=localhost;userid=root;password=;database=real_estate_sale_db;port=3306";
             services.AddDbContext<EstateMySqlIdentityContext>(options => options.UseMySQL(connectionString));
@@ -55,13 +64,24 @@ namespace EstateSales.Backend.BackendExtensions
             );
         }
 
+        public static void ConfigureInMemoryIdentityContext(this IServiceCollection services)
+        {
+            string dbNameInMemoryContext = "EstateIdentity" + Guid.NewGuid();
+            services.AddDbContext<EstateInMemoryIdentityContext>(
 
-      
+                options => options.UseInMemoryDatabase(databaseName: dbNameInMemoryContext),
+                ServiceLifetime.Scoped,
+                 ServiceLifetime.Scoped
+            );
+        }
+
+
+
 
         public static void ConfigureRepos (this IServiceCollection services)
         {
             bool test=false;
-            if (test)
+            if (_selectedDatabase==SelectedDatabase.InMemory)
             {
                 services.AddScoped<IBaseRepo<User>, UserRepo<EstateInMemoryContext>>();
                 services.AddScoped<IBaseRepo<Advertisement>, AdvertisementRepo<EstateInMemoryContext>>();
@@ -72,7 +92,7 @@ namespace EstateSales.Backend.BackendExtensions
 
                 //services.AddScoped<IUserRepo, UserRepo<EstateInMemoryContext>>();
             }
-            else
+            else if (_selectedDatabase==SelectedDatabase.MySql)
             {
                 services.AddScoped<IBaseRepo<User>, UserRepo<EstateMySqlContext>>();
                 services.AddScoped<IBaseRepo<Advertisement>, AdvertisementRepo<EstateMySqlContext>>();
@@ -83,5 +103,37 @@ namespace EstateSales.Backend.BackendExtensions
 
             }
         }
+
+        public static void ConfigureServices(this IServiceCollection services)
+        {
+            var builder = new ConfigurationBuilder()
+                .SetBasePath(Directory.GetCurrentDirectory())
+                .AddJsonFile("appsettings.json", optional: true, reloadOnChange: true);
+
+            IConfiguration configuration = builder.Build();
+            services.Configure<SmtpSettings>(configuration.GetSection("SmtpSettings"));
+
+            services.AddScoped<IEmailSender, SmtpEmailSender>();
+            services.AddTransient<IEmailSender<LoginUser>, UserEmailSender>();
+        }
+
+        public static void AddAuthenticationServices(this IServiceCollection services)
+        {
+            if (_selectedDatabase == SelectedDatabase.InMemory)
+            {
+                services.AddSingleton(TimeProvider.System);
+                services.AddAuthorization();
+                services.AddIdentityApiEndpoints<LoginUser>()
+                    .AddEntityFrameworkStores<EstateInMemoryIdentityContext>();
+            }
+            else if (_selectedDatabase == SelectedDatabase.MySql)
+            {
+                services.AddSingleton(TimeProvider.System);
+                services.AddAuthorization();
+                services.AddIdentity<LoginUser, IdentityRole>()
+                    .AddEntityFrameworkStores<EstateMySqlIdentityContext>()
+                    .AddDefaultTokenProviders();
+            }
+        }            
     }
 }
