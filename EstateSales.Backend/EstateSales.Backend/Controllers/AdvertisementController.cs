@@ -1,4 +1,5 @@
 ﻿using EstateSales.Backend.Datas.Entities;
+using EstateSales.Backend.Repo;
 using EstateSales.Backend.Repo.Base;
 using EstateSales.Backend.Responses;
 using Microsoft.AspNetCore.Mvc;
@@ -10,15 +11,21 @@ namespace EstateSales.Backend.Controllers
     [Route("api/[controller]")]
     public class AdvertisementController : BaseController<Advertisement>
     {
-        public AdvertisementController(IBaseRepo<Advertisement> repo) : base(repo)
+        IPhotoRepo _photoRepo;
+        IAdvertisementRepo _advertisementRepo;
+        public AdvertisementController(IBaseRepo<Advertisement> repo, IPhotoRepo photoRepo, IAdvertisementRepo advertisementRepo) : base(repo)
         {
-            
+            _photoRepo = photoRepo ?? throw new ArgumentException($"{photoRepo}");
+            _advertisementRepo = advertisementRepo ?? throw new ArgumentException($"{advertisementRepo}");
         }
+
+        
 
 
          [HttpPost("CreateAdvertisement")]
          [Consumes("multipart/form-data")]
          public async Task<IActionResult> CreateAdvertisement(
+                     [FromForm] Guid userId,
                      [FromForm] string title,
                      [FromForm] double price,
                      [FromForm] double baseArea,
@@ -44,6 +51,7 @@ namespace EstateSales.Backend.Controllers
                 Advertisement advertisement = new Advertisement
                 {
                     Id = Guid.NewGuid(),
+                    UserId = userId,
                     Title = title,
                     Price = price,
                     BaseArea = baseArea,
@@ -61,30 +69,82 @@ namespace EstateSales.Backend.Controllers
                 var advertisementFolder = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "uploads", advertisement.Id.ToString());
                 Directory.CreateDirectory(advertisementFolder);
 
-          
-                foreach (var photo in photos)
-                {
-                    if (photo.Length > 0)
-                    {
-                        var fileName = Guid.NewGuid().ToString() + Path.GetExtension(photo.FileName);
-                        var filePath = Path.Combine(advertisementFolder, fileName);
 
-                        using (var stream = new FileStream(filePath, FileMode.Create))
-                        {
-                            await photo.CopyToAsync(stream);
-                        }
+            foreach (var photo in photos)
+            {
+                if (photo.Length > 0)
+                {
+                    var fileName = Guid.NewGuid().ToString() + Path.GetExtension(photo.FileName);
+                    var filePath = Path.Combine(advertisementFolder, fileName);
 
                    
-                        advertisement.PhotosPath.Add($"/uploads/{advertisement.Id}/{fileName}");
+
+                    using (var stream = new FileStream(filePath, FileMode.Create))
+                    {
+                        await photo.CopyToAsync(stream);
                     }
+
+
+
+                    Photo newPhoto = new Photo( $"/uploads/{advertisement.Id}/{fileName}",advertisement.Id);
+                    responsee = await _photoRepo.CreatePhotoAsync(newPhoto);
                 }
-
+            }
            
-                await _repo.CreateAsync(advertisement);
-           
-
+               responsee= await _repo.CreateAsync(advertisement);
+            if (responsee.HasError)
+            {
+                Console.WriteLine(responsee.Error);
+            }
+            else
+            {
                 return Ok(responsee);
             }
 
+            responsee.ClearAndAddError("Az új adatok mentése nem lehetséges");
+           return BadRequest(responsee);
+            }
+
+
+
+
+
+
+            [HttpGet("GetByIdWithPhotos/{advertisementId}")]
+            public async Task<IActionResult> GetAdvertisementWithPhotos(Guid advertisementId)
+            {
+            
+                var advertisement = await _advertisementRepo.GetAdvertisementWithPhotosAsync(advertisementId);
+
+                if (advertisement == null)
+                {
+                    return NotFound($"A hirdetés {advertisementId} ID-val nem található.");
+                }
+
+                return Ok(advertisement);
+            }
+
+        // teszteléshez
+        [HttpGet("photos/count")]
+        public async Task<IActionResult> GetTotalPhotoCount()
+        {
+            var totalPhotoCount = await _photoRepo.GetTotalPhotoCountAsync();
+            return Ok(new { TotalPhotos = totalPhotoCount });
+        }
+
+
+        [HttpGet("all")]
+        public async Task<IActionResult> GetAllAdvertisementsWithPhotos()
+        {
+            var advertisements = await _advertisementRepo.GetAllAdvertisementsWithPhotosAsync();
+            return Ok(advertisements);
+        }
+
+
+
+
+
+
+
     }
- }
+}

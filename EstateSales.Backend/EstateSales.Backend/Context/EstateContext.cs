@@ -9,6 +9,7 @@ namespace EstateSales.Backend.Context
         public DbSet<User> Users { get; set; }
         public DbSet<Advertisement> Advertisements { get; set; }
         public DbSet<Message> Messages { get; set; }
+        public DbSet<Photo> Photos { get; set; }
         public EstateContext(DbContextOptions options) : base(options)
         {
 
@@ -24,15 +25,11 @@ namespace EstateSales.Backend.Context
 
             modelBuilder.Entity<Message>().HasOne(mes=>mes.User).WithMany(u=>u.Messages).HasForeignKey(msg=>msg.UserId)
                 .OnDelete(deleteBehavior: DeleteBehavior.Cascade);
+            modelBuilder.Entity<Photo>().HasOne(photo=>photo.Advertisement).WithMany(ad=>ad.Photos).HasForeignKey(photo=>photo.AdvertisementId).
+                OnDelete(deleteBehavior: DeleteBehavior.Cascade);
 
 
-            modelBuilder.Entity<Advertisement>()
-                .Property(a => a.PhotosPath)
-                .HasConversion(
-                    v => Newtonsoft.Json.JsonConvert.SerializeObject(v),
-                    v => Newtonsoft.Json.JsonConvert.DeserializeObject<List<string>>(v)
-                );
-
+            
 
             base.OnModelCreating(modelBuilder);
         }
