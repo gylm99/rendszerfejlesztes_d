@@ -40,7 +40,7 @@ namespace EstateSales.Backend.Controllers
                      [FromForm] List<IFormFile> photos)
             { 
 
-                Responsee responsee = new Responsee();
+                Response responsee = new Response();
             if (string.IsNullOrWhiteSpace(title) || string.IsNullOrWhiteSpace(description))
             {
                 responsee.ClearAndAddError("A cím és/vagy leírás üresek.");

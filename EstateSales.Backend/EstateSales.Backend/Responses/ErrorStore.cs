@@ -18,6 +18,11 @@
         {
             Error = error;
         }
+        public Response SetNewError(string error)
+        {
+            Error = error;
+            return (Response)this;
+        }
 
         public void AppendNewError(string error)
         {

@@ -31,9 +31,9 @@ namespace EstateSales.Backend.Repo.Base
         {
             return Task.FromResult(_dbSet!.SelectAll().GetById(id));
         }
-        public async Task<Responsee> UpdateAsync(TEntity entity)
+        public async Task<Response> UpdateAsync(TEntity entity)
         {
-            Responsee response = new();
+            Response response = new();
             try
             {
                 if (_dbContext is not null)
@@ -53,9 +53,9 @@ namespace EstateSales.Backend.Repo.Base
             response.AppendNewError($"{entity} frissítése nem sikerült!");
             return response;
         }
-        public async Task<Responsee> DeleteAsync(Guid id)
+        public async Task<Response> DeleteAsync(Guid id)
         {
-            Responsee response = new();
+            Response response = new();
 
             TEntity? entityToDelete = _dbSet!.FindByCondition(e => e.Id == id).FirstOrDefault();
 
@@ -89,9 +89,9 @@ namespace EstateSales.Backend.Repo.Base
             response.AppendNewError($"Az entitás törlése nem sikerült!");
             return response;
         }
-        public async Task<Responsee> CreateAsync(TEntity entity)
+        public async Task<Response> CreateAsync(TEntity entity)
         {
-            Responsee response = new();
+            Response response = new();
             if (_dbSet is null)
             {
                 response.AppendNewError($"{entity} osztály hozzáadása az adatbázishoz nem sikerült!");

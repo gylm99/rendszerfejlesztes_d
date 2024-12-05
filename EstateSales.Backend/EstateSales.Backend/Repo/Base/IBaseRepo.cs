@@ -9,8 +9,8 @@ namespace EstateSales.Backend.Repo.Base
         Task<List<TEntity>> GetAllAsync();
         Task<List<TEntity>> FindByConditionAsync(Expression<Func<TEntity, bool>> expression);
         Task<TEntity?> GetByIdAsync(Guid id);
-        Task<Responsee> CreateAsync(TEntity entity);
-        Task<Responsee> UpdateAsync(TEntity entity);
-        Task<Responsee> DeleteAsync(Guid id);
+        Task<Response> CreateAsync(TEntity entity);
+        Task<Response> UpdateAsync(TEntity entity);
+        Task<Response> DeleteAsync(Guid id);
     }
 }

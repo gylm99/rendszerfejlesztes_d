@@ -40,6 +40,9 @@ app.UseAuthorization();
 
 app.MapControllers();
 
-app.Run();
 app.MapIdentityApi<LoginUser>();
+
 app.UseDeveloperExceptionPage();
+
+app.Run();
+

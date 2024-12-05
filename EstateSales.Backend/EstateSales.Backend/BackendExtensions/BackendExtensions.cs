@@ -2,7 +2,9 @@
 using EstateSales.Backend.Datas.Entities;
 using EstateSales.Backend.Repo;
 using EstateSales.Backend.Repo.Base;
+using EstateSales.Backend.Services.Email;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Identity.UI.Services;
 using Microsoft.EntityFrameworkCore;
 
 namespace EstateSales.Backend.BackendExtensions
@@ -11,7 +13,7 @@ namespace EstateSales.Backend.BackendExtensions
     public static class BackendExtensions
     {
         
-        public static SelectedDatabase _selectedDatabase=SelectedDatabase.InMemory;
+        public static SelectedDatabase _selectedDatabase=SelectedDatabase.MySql;
         public static void ConfigureBackend(this IServiceCollection services)
         {
             
@@ -21,6 +23,7 @@ namespace EstateSales.Backend.BackendExtensions
             services.ConfigureMysqlContext();
             services.ConfigureMysqlIdentityContext();            
             services.ConfigureRepos();
+            services.ConfigureServices();
 
             services.AddAuthenticationServices();
         }
@@ -99,6 +102,19 @@ namespace EstateSales.Backend.BackendExtensions
                 services.AddScoped<IMessageRepo, MessageRepo<EstateMySqlContext>>();
 
             }
+        }
+
+        public static void ConfigureServices(this IServiceCollection services)
+        {
+            var builder = new ConfigurationBuilder()
+                .SetBasePath(Directory.GetCurrentDirectory())
+                .AddJsonFile("appsettings.json", optional: true, reloadOnChange: true);
+
+            IConfiguration configuration = builder.Build();
+            services.Configure<SmtpSettings>(configuration.GetSection("SmtpSettings"));
+
+            services.AddScoped<IEmailSender, SmtpEmailSender>();
+            services.AddTransient<IEmailSender<LoginUser>, UserEmailSender>();
         }
 
         public static void AddAuthenticationServices(this IServiceCollection services)

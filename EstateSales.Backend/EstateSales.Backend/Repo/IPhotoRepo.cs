@@ -5,7 +5,7 @@ namespace EstateSales.Backend.Repo
 {
     public interface IPhotoRepo
     {
-        Task<Responsee> CreatePhotoAsync(Photo photo);
+        Task<Response> CreatePhotoAsync(Photo photo);
         Task<List<Photo>> GetPhotoByAdvertisementIdAsync(Guid advertisementId);
         public Task<int> GetTotalPhotoCountAsync();
     }
