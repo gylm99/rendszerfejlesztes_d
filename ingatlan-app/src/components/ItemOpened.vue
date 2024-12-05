@@ -59,20 +59,6 @@
           <h3 class="text-xl font-bold text-green-700">Description</h3>
           <p class="text-gray-600 mt-2">{{ description }}</p>
         </div>
-  
-        <div>
-          <h3 class="text-xl font-bold text-green-700">Map</h3>
-          <div class="mt-4">
-            <iframe
-              :src="mapUrl"
-              width="100%"
-              height="300"
-              class="border-0 rounded shadow"
-              allowfullscreen=""
-              loading="lazy"
-            ></iframe>
-          </div>
-        </div>
       </div>
   
       <div
@@ -117,7 +103,6 @@
           "Orientation": "South"
         },
         description: "This is a beautiful property located in the heart of the city. It offers a spacious living area with modern amenities.",
-        mapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11036.644757627191!2d20.14595825!3d46.2470233!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4744886fcae1ca23%3A0x86ed62035d959c3!2sSzegedi%20D%C3%B3m!5e0!3m2!1shu!2shu!4v1732181758863!5m2!1shu!2shu",
         showModal: false,
         allImages: [
           "https://via.placeholder.com/300x200",
