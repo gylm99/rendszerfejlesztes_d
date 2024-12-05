@@ -8,5 +8,7 @@ namespace EstateSales.Backend.Repo
         Task<Advertisement?> GetAdvertisementWithPhotosAsync(Guid advertisementId);
         Task<List<Advertisement>> GetAllAdvertisementsWithPhotosAsync();
         //Task<int> GetTotalPhotoCountAsync();
+
+        Task<List<Advertisement>> GetAdvertisementsByUserIdAsync(Guid userId);
     }
 }

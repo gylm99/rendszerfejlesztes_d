@@ -37,6 +37,15 @@ namespace EstateSales.Backend.Repo
         }
 
 
+        public async Task<List<Advertisement>> GetAdvertisementsByUserIdAsync(Guid userId)
+        {
+            return await _dbSet
+                .Where(a => a.UserId == userId)
+                .Include(a => a.Photos) 
+                .ToListAsync();
+        }
+
+
 
 
     }

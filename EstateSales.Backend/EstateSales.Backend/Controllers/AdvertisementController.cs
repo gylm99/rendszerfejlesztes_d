@@ -69,7 +69,7 @@ namespace EstateSales.Backend.Controllers
                 var advertisementFolder = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "uploads", advertisement.Id.ToString());
                 Directory.CreateDirectory(advertisementFolder);
 
-
+            //int i = 1;
             foreach (var photo in photos)
             {
                 if (photo.Length > 0)
@@ -137,6 +137,20 @@ namespace EstateSales.Backend.Controllers
         public async Task<IActionResult> GetAllAdvertisementsWithPhotos()
         {
             var advertisements = await _advertisementRepo.GetAllAdvertisementsWithPhotosAsync();
+            return Ok(advertisements);
+        }
+
+
+        [HttpGet("user/{userId}")]
+        public async Task<IActionResult> GetAdvertisementsByUserId(Guid userId)
+        {
+            var advertisements = await _advertisementRepo.GetAdvertisementsByUserIdAsync(userId);
+
+            if (advertisements == null || !advertisements.Any())
+            {
+                return NotFound($"Nem található hírdetés a megadott {userId}  id alapján.");
+            }
+
             return Ok(advertisements);
         }
 
