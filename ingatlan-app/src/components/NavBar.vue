@@ -83,7 +83,7 @@ export default {
                 class="absolute right-0 mt-2 w-48 bg-gray-100 rounded-md shadow-lg z-50"
               >
                 <router-link
-                  to="/messages"
+                  to="/mymessages"
                   class="block px-4 py-2 text-gray-700 hover:bg-gray-200"
                 >
                   Messages
