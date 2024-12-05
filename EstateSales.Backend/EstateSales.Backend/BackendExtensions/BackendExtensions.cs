@@ -60,7 +60,7 @@ namespace EstateSales.Backend.BackendExtensions
 
         public static void ConfigureRepos (this IServiceCollection services)
         {
-            bool test=true;
+            bool test=false;
             if (test)
             {
                 services.AddScoped<IBaseRepo<User>, UserRepo<EstateInMemoryContext>>();

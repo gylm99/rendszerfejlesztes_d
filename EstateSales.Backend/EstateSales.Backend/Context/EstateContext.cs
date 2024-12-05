@@ -23,8 +23,11 @@ namespace EstateSales.Backend.Context
             modelBuilder.Entity<Advertisement>().HasOne(ad=>ad.User).WithMany(u=>u.Advertisements).
                 HasForeignKey(ad=>ad.UserId).OnDelete(DeleteBehavior.Cascade);
 
-            modelBuilder.Entity<Message>().HasOne(mes=>mes.User).WithMany(u=>u.Messages).HasForeignKey(msg=>msg.UserId)
-                .OnDelete(deleteBehavior: DeleteBehavior.Cascade);
+            /* modelBuilder.Entity<Message>().HasOne(mes=>mes.User).WithMany(u=>u.Messages).HasForeignKey(msg=>msg.UserId)
+                 .OnDelete(deleteBehavior: DeleteBehavior.Cascade);*/
+
+            modelBuilder.Entity<User>() .HasMany(u => u.Messages).WithOne(m => m.User).HasForeignKey(m => m.UserId)
+             .OnDelete(DeleteBehavior.Cascade);
             modelBuilder.Entity<Photo>().HasOne(photo=>photo.Advertisement).WithMany(ad=>ad.Photos).HasForeignKey(photo=>photo.AdvertisementId).
                 OnDelete(deleteBehavior: DeleteBehavior.Cascade);
 

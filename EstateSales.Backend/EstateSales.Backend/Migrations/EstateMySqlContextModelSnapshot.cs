@@ -52,10 +52,6 @@ namespace EstateSales.Backend.Migrations
                         .IsRequired()
                         .HasColumnType("longtext");
 
-                    b.Property<string>("PhotosPath")
-                        .IsRequired()
-                        .HasColumnType("longtext");
-
                     b.Property<double>("Price")
                         .HasColumnType("double");
 
@@ -66,7 +62,7 @@ namespace EstateSales.Backend.Migrations
                         .IsRequired()
                         .HasColumnType("longtext");
 
-                    b.Property<Guid>("UserId")
+                    b.Property<Guid?>("UserId")
                         .HasColumnType("char(36)");
 
                     b.HasKey("Id");
@@ -78,7 +74,7 @@ namespace EstateSales.Backend.Migrations
                     b.HasData(
                         new
                         {
-                            Id = new Guid("623fb916-4fba-4c48-8194-da46a418a2ee"),
+                            Id = new Guid("ef4b28b9-1a17-4c37-b647-7bf18ebd2aba"),
                             BaseArea = 75.5,
                             BuiltYear = 2010,
                             Confort = "Luxus",
@@ -87,15 +83,13 @@ namespace EstateSales.Backend.Migrations
                             HasElevator = true,
                             MainBuildingFloorLevel = 4,
                             Orientation = "Dél",
-                            PhotosPath = "[]",
                             Price = 45000000.0,
                             RoomNumber = 3,
-                            Title = "Modern lakás a belvárosban",
-                            UserId = new Guid("00000000-0000-0000-0000-000000000000")
+                            Title = "Modern lakás a belvárosban"
                         },
                         new
                         {
-                            Id = new Guid("4162e3aa-74cd-40c4-be8d-2e2fed210f5d"),
+                            Id = new Guid("39dd19f3-e486-481d-90a9-bf3e6ec9694b"),
                             BaseArea = 120.0,
                             BuiltYear = 2005,
                             Confort = "Komfortos",
@@ -104,15 +98,13 @@ namespace EstateSales.Backend.Migrations
                             HasElevator = false,
                             MainBuildingFloorLevel = 1,
                             Orientation = "Nyugat",
-                            PhotosPath = "[]",
                             Price = 85000000.0,
                             RoomNumber = 4,
-                            Title = "Családi ház kertvárosi övezetben",
-                            UserId = new Guid("00000000-0000-0000-0000-000000000000")
+                            Title = "Családi ház kertvárosi övezetben"
                         },
                         new
                         {
-                            Id = new Guid("63f5a5f8-08e6-40db-a265-47ef283edc89"),
+                            Id = new Guid("6e336009-ea37-4d87-9a98-2dffef21f4b6"),
                             BaseArea = 50.0,
                             BuiltYear = 1980,
                             Confort = "Alap",
@@ -121,15 +113,13 @@ namespace EstateSales.Backend.Migrations
                             HasElevator = false,
                             MainBuildingFloorLevel = 5,
                             Orientation = "Észak",
-                            PhotosPath = "[]",
                             Price = 30000000.0,
                             RoomNumber = 2,
-                            Title = "Felújítandó lakás",
-                            UserId = new Guid("00000000-0000-0000-0000-000000000000")
+                            Title = "Felújítandó lakás"
                         },
                         new
                         {
-                            Id = new Guid("d0b2eec0-b070-463b-8620-d62429371c10"),
+                            Id = new Guid("5738cfed-8495-413e-97f4-9c642b6a4e53"),
                             BaseArea = 200.0,
                             BuiltYear = 2022,
                             Confort = "Extra luxus",
@@ -138,11 +128,9 @@ namespace EstateSales.Backend.Migrations
                             HasElevator = true,
                             MainBuildingFloorLevel = 5,
                             Orientation = "Kelet-Dél",
-                            PhotosPath = "[]",
                             Price = 150000000.0,
                             RoomNumber = 5,
-                            Title = "Új építésű penthouse",
-                            UserId = new Guid("00000000-0000-0000-0000-000000000000")
+                            Title = "Új építésű penthouse"
                         });
                 });
 
@@ -163,7 +151,7 @@ namespace EstateSales.Backend.Migrations
                         .IsRequired()
                         .HasColumnType("longtext");
 
-                    b.Property<Guid>("UserId")
+                    b.Property<Guid?>("UserId")
                         .HasColumnType("char(36)");
 
                     b.HasKey("Id");
@@ -175,20 +163,38 @@ namespace EstateSales.Backend.Migrations
                     b.HasData(
                         new
                         {
-                            Id = new Guid("0d5e3a1b-fa5f-4d5e-828e-f8fed77c666e"),
+                            Id = new Guid("c1195499-d33b-46be-a190-b0c9701c2632"),
                             Content = "Szia Elek!\nÉrdekel a házad!",
-                            CreatedAt = new DateTime(2024, 11, 28, 22, 54, 56, 657, DateTimeKind.Local).AddTicks(7001),
-                            SenderEmailAddress = "mirmur@gmail.com",
-                            UserId = new Guid("00000000-0000-0000-0000-000000000000")
+                            CreatedAt = new DateTime(2024, 12, 5, 22, 51, 37, 56, DateTimeKind.Local).AddTicks(9711),
+                            SenderEmailAddress = "mirmur@gmail.com"
                         },
                         new
                         {
-                            Id = new Guid("0e61ad7e-a5b6-4d96-9e98-d138a2fa0b45"),
+                            Id = new Guid("840a4d02-d98b-41b1-a5d2-85a37e1c8e3f"),
                             Content = "Szia Eszter!\nÉrdekel a házad!",
-                            CreatedAt = new DateTime(2024, 11, 28, 22, 54, 56, 657, DateTimeKind.Local).AddTicks(7059),
-                            SenderEmailAddress = "frakk@gmail.com",
-                            UserId = new Guid("00000000-0000-0000-0000-000000000000")
+                            CreatedAt = new DateTime(2024, 12, 5, 22, 51, 37, 56, DateTimeKind.Local).AddTicks(9769),
+                            SenderEmailAddress = "frakk@gmail.com"
                         });
+                });
+
+            modelBuilder.Entity("EstateSales.Backend.Datas.Entities.Photo", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("char(36)");
+
+                    b.Property<Guid>("AdvertisementId")
+                        .HasColumnType("char(36)");
+
+                    b.Property<string>("ImagePath")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("AdvertisementId");
+
+                    b.ToTable("Photos");
                 });
 
             modelBuilder.Entity("EstateSales.Backend.Datas.Entities.User", b =>
@@ -220,7 +226,7 @@ namespace EstateSales.Backend.Migrations
                     b.HasData(
                         new
                         {
-                            Id = new Guid("fd3a5dd7-2f22-4d72-806b-01ed2bb3d71f"),
+                            Id = new Guid("5fab70bd-b457-4da5-ad55-8bb41cb789f4"),
                             Email = "mekk@mek.com",
                             Name = "Mekk Elek",
                             Number = "+36/309025476",
@@ -228,7 +234,7 @@ namespace EstateSales.Backend.Migrations
                         },
                         new
                         {
-                            Id = new Guid("23151404-ded3-4b55-bdf0-58b41137d9d7"),
+                            Id = new Guid("0991eebc-df6a-43c7-9672-fa54b23bb001"),
                             Email = "teszt@teszt.com",
                             Name = "Teszt Eszter",
                             Number = "+36-20-735-2742",
@@ -241,8 +247,7 @@ namespace EstateSales.Backend.Migrations
                     b.HasOne("EstateSales.Backend.Datas.Entities.User", "User")
                         .WithMany("Advertisements")
                         .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .OnDelete(DeleteBehavior.Cascade);
 
                     b.Navigation("User");
                 });
@@ -252,10 +257,25 @@ namespace EstateSales.Backend.Migrations
                     b.HasOne("EstateSales.Backend.Datas.Entities.User", "User")
                         .WithMany("Messages")
                         .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade);
+
+                    b.Navigation("User");
+                });
+
+            modelBuilder.Entity("EstateSales.Backend.Datas.Entities.Photo", b =>
+                {
+                    b.HasOne("EstateSales.Backend.Datas.Entities.Advertisement", "Advertisement")
+                        .WithMany("Photos")
+                        .HasForeignKey("AdvertisementId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.Navigation("User");
+                    b.Navigation("Advertisement");
+                });
+
+            modelBuilder.Entity("EstateSales.Backend.Datas.Entities.Advertisement", b =>
+                {
+                    b.Navigation("Photos");
                 });
 
             modelBuilder.Entity("EstateSales.Backend.Datas.Entities.User", b =>

@@ -1,4 +1,6 @@
-﻿namespace EstateSales.Backend.Datas.Entities
+﻿using System.Text.Json.Serialization;
+
+namespace EstateSales.Backend.Datas.Entities
 {
     public class Message:IDbEntity<Message>
     {
@@ -8,7 +10,8 @@
         public DateTime CreatedAt { get; set; }
         public bool HasId => Id != Guid.Empty;
 
-        public Guid UserId { get; set; }
+        public Guid? UserId { get; set; }
+        [JsonIgnore]
         public User User { get; set; }
 
         public Message(Guid id, string senderEmailAddress, string content, DateTime createdAt)

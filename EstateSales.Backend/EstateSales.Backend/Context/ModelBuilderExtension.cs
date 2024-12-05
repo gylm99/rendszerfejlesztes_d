@@ -11,7 +11,7 @@ namespace EstateSales.Backend.Context
             List<User> users = new List<User>()
             {
                  new User("Mekk Elek", "mekk@mek.com", "mekmek", "+36/309025476"),
-                    new User("Teszt Eszter", "teszt@teszt.com", "teszt", "+36-20-735-2742")
+                 new User("Teszt Eszter", "teszt@teszt.com", "teszt", "+36-20-735-2742")
             };
             List<Advertisement> advertisements = new List<Advertisement>()
             {

@@ -12,8 +12,11 @@ namespace EstateSales.Backend.Controllers
     {
         
 
-            IMessageRepo _messageRepo;
-            public MessageController(IBaseRepo<Message> repo, IMessageRepo messageRepo) : base(repo) { }
+        IMessageRepo _messageRepo;
+        public MessageController(IBaseRepo<Message> repo, IMessageRepo? messageRepo) : base(repo)
+        {
+            _messageRepo = messageRepo ?? throw new ArgumentException($"{messageRepo}");
+        }
 
             [HttpPost("CreateMessage")]
             public async Task<IActionResult> CreateMessage(
@@ -44,20 +47,26 @@ namespace EstateSales.Backend.Controllers
             }
 
 
-        /*    [HttpGet("GetMessageByUser/{userId}")]
-            public async Task<IActionResult> GetMessageByUser(Guid userId)
+        [HttpGet("GetMessageByUser/{userId}")]
+        public async Task<IActionResult> GetMessageByUser(Guid userId)
+        {
+            List<Message> messages = [];
+            try
             {
+                messages = await _messageRepo.GetMessagesByUserIdAsync(userId);
+            }
+            catch (Exception ex)
+            {
+            }
 
-                var messages = await _messageRepo.MessagesByUserAsync(userId);
-
-                if (messages == null || !messages.Any())
-                {
-                    return BadRequest($"Nem talál {userId} felhasználóhoz hozzátartozó üzenet.");
-                }
-                else
-                {
-                    return Ok(messages);
-                }
-            }*/
+            if (messages == null || !messages.Any())
+            {
+                return BadRequest($"Nem talál {userId} felhasználóhoz hozzátartozó üzenet.");
+            }
+            else
+            {
+                return Ok(messages);
+            }
+        }
     }
 }
