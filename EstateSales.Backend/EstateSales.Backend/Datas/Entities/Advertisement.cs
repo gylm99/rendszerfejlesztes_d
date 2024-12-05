@@ -28,7 +28,7 @@ namespace EstateSales.Backend.Datas.Entities
         public bool HasId => Id != Guid.Empty;
 
         //ab kapcsolat
-        public Guid UserId { get; set; }
+        public Guid? UserId { get; set; }
         public User User { get; set; }
       
 
