@@ -16,5 +16,7 @@ namespace EstateSales.Backend.Repo
         {
             return await _dbSet!.SelectAll().Include(x=>x.User).ToListAsync();
         }
+
+        
     }
 }

@@ -68,6 +68,7 @@ namespace EstateSales.Backend.BackendExtensions
                 services.AddScoped<IBaseRepo<Message>, MessageRepo<EstateInMemoryContext>>();
                 services.AddScoped<IPhotoRepo, PhotoRepo<EstateInMemoryContext>>();
                 services.AddScoped<IAdvertisementRepo, AdvertisementRepo<EstateInMemoryContext>>();
+                services.AddScoped<IMessageRepo, MessageRepo<EstateInMemoryContext>>();
 
                 //services.AddScoped<IUserRepo, UserRepo<EstateInMemoryContext>>();
             }
@@ -78,6 +79,8 @@ namespace EstateSales.Backend.BackendExtensions
                 services.AddScoped<IBaseRepo<Message>,MessageRepo<EstateMySqlContext>>();
                 services.AddScoped<IPhotoRepo,PhotoRepo<EstateMySqlContext>>();
                 services.AddScoped<IAdvertisementRepo, AdvertisementRepo<EstateMySqlContext>>();
+                services.AddScoped<IMessageRepo, MessageRepo<EstateMySqlContext>>();
+
             }
         }
     }
