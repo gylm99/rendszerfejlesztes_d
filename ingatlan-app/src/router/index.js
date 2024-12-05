@@ -4,6 +4,7 @@ import SignInView from '../views/SignInView.vue'
 import SignUpView from '../views/SignUpView.vue'
 import ItemView from '../views/ItemView.vue'
 import ItemUploadView from '../views/ItemUploadView.vue'
+import MyMessagesView from '../views/MyMessagesView.vue'
 
 
 
@@ -16,22 +17,19 @@ const routes = [
     SignInView,
     SignUpView,
     ItemView,
-    ItemUploadView
+    ItemUploadView,
+    MyMessagesView
   },
   {
     path: '/signin',
     name: 'signin',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
+
     component: () => import(/* webpackChunkName: "about" */ '../views/SignInView.vue')
   },
   {
     path: '/signup',
     name: 'signup',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
+
     component: () => import(/* webpackChunkName: "about" */ '../views/SignUpView.vue')
   },
   {
@@ -43,6 +41,11 @@ const routes = [
     path: '/itemupload',
     name: 'itemupload',
     component: () => import(/* webpackChunkName: "about" */ '../views/ItemUploadView.vue')
+  },
+  {
+    path: '/mymessages',
+    name: 'mymessages',
+    component: () => import(/* webpackChunkName: "about" */ '../views/MyMessagesView.vue')
   }
 ]
 
