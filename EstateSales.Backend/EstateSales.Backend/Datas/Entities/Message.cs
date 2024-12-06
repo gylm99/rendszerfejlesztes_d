@@ -12,7 +12,7 @@ namespace EstateSales.Backend.Datas.Entities
 
         public Guid? UserId { get; set; }
         [JsonIgnore]
-        public User User { get; set; }
+        public User? User { get; set; }
 
         public Message(Guid id, string senderEmailAddress, string content, DateTime createdAt)
         {

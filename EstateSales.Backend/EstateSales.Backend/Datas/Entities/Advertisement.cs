@@ -21,7 +21,7 @@ namespace EstateSales.Backend.Datas.Entities
 
         // FOTOK tarolasa
 
-        public ICollection<Photo> Photos { get; set; } = new List<Photo>();
+        public ICollection<Photo>? Photos { get; set; } = new List<Photo>();
 
 
         // backendhez szügséges propok
@@ -29,7 +29,7 @@ namespace EstateSales.Backend.Datas.Entities
 
         //ab kapcsolat
         public Guid? UserId { get; set; }
-        public User User { get; set; }
+        public User? User { get; set; }
       
 
         public Advertisement(Guid id, string title, double price, double baseArea,

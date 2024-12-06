@@ -13,8 +13,8 @@ namespace EstateSales.Backend.Datas.Entities
         //kapcs prop
 
         [JsonIgnore]
-        public Advertisement Advertisement { get; set; }
-        public Guid AdvertisementId { get; set; }
+        public Advertisement? Advertisement { get; set; }
+        public Guid? AdvertisementId { get; set; }
 
         public Photo(string name) { Id = Guid.NewGuid(); ImagePath = name; }
         public Photo ( string name, Guid advertisementId) 

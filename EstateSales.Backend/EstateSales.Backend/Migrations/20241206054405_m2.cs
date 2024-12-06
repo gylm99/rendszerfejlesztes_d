@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace EstateSales.Backend.Migrations
 {
     /// <inheritdoc />
-    public partial class m1 : Migration
+    public partial class m2 : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -90,7 +90,7 @@ namespace EstateSales.Backend.Migrations
                 {
                     Id = table.Column<Guid>(type: "char(36)", nullable: false),
                     ImagePath = table.Column<string>(type: "longtext", nullable: false),
-                    AdvertisementId = table.Column<Guid>(type: "char(36)", nullable: false)
+                    AdvertisementId = table.Column<Guid>(type: "char(36)", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -109,10 +109,10 @@ namespace EstateSales.Backend.Migrations
                 columns: new[] { "Id", "BaseArea", "BuiltYear", "Confort", "Description", "FloorLevel", "HasElevator", "MainBuildingFloorLevel", "Orientation", "Price", "RoomNumber", "Title", "UserId" },
                 values: new object[,]
                 {
-                    { new Guid("39dd19f3-e486-481d-90a9-bf3e6ec9694b"), 120.0, 2005, "Komfortos", "Csendes környék, nagy kerttel.", 0, false, 1, "Nyugat", 85000000.0, 4, "Családi ház kertvárosi övezetben", null },
-                    { new Guid("5738cfed-8495-413e-97f4-9c642b6a4e53"), 200.0, 2022, "Extra luxus", "Luxus szintű lakás panorámás kilátással.", 5, true, 5, "Kelet-Dél", 150000000.0, 5, "Új építésű penthouse", null },
-                    { new Guid("6e336009-ea37-4d87-9a98-2dffef21f4b6"), 50.0, 1980, "Alap", "Kiváló befektetési lehetőség a belvárosban.", 3, false, 5, "Észak", 30000000.0, 2, "Felújítandó lakás", null },
-                    { new Guid("ef4b28b9-1a17-4c37-b647-7bf18ebd2aba"), 75.5, 2010, "Luxus", "Tágas, világos lakás remek közlekedéssel.", 2, true, 4, "Dél", 45000000.0, 3, "Modern lakás a belvárosban", null }
+                    { new Guid("4b910331-6bd9-46f9-9f9b-7a89eff7fe94"), 75.5, 2010, "Luxus", "Tágas, világos lakás remek közlekedéssel.", 2, true, 4, "Dél", 45000000.0, 3, "Modern lakás a belvárosban", null },
+                    { new Guid("70602bc9-41cc-42a7-89cf-3084c5bcd328"), 50.0, 1980, "Alap", "Kiváló befektetési lehetőség a belvárosban.", 3, false, 5, "Észak", 30000000.0, 2, "Felújítandó lakás", null },
+                    { new Guid("7bd112da-6095-4958-a5d8-0658d3acdf71"), 120.0, 2005, "Komfortos", "Csendes környék, nagy kerttel.", 0, false, 1, "Nyugat", 85000000.0, 4, "Családi ház kertvárosi övezetben", null },
+                    { new Guid("a462b0d3-e69b-491f-9c1c-9b582a796e04"), 200.0, 2022, "Extra luxus", "Luxus szintű lakás panorámás kilátással.", 5, true, 5, "Kelet-Dél", 150000000.0, 5, "Új építésű penthouse", null }
                 });
 
             migrationBuilder.InsertData(
@@ -120,8 +120,8 @@ namespace EstateSales.Backend.Migrations
                 columns: new[] { "Id", "Content", "CreatedAt", "SenderEmailAddress", "UserId" },
                 values: new object[,]
                 {
-                    { new Guid("840a4d02-d98b-41b1-a5d2-85a37e1c8e3f"), "Szia Eszter!\nÉrdekel a házad!", new DateTime(2024, 12, 5, 22, 51, 37, 56, DateTimeKind.Local).AddTicks(9769), "frakk@gmail.com", null },
-                    { new Guid("c1195499-d33b-46be-a190-b0c9701c2632"), "Szia Elek!\nÉrdekel a házad!", new DateTime(2024, 12, 5, 22, 51, 37, 56, DateTimeKind.Local).AddTicks(9711), "mirmur@gmail.com", null }
+                    { new Guid("9ebcab83-7fca-4db9-ae57-a0b57fbda7bf"), "Szia Eszter!\nÉrdekel a házad!", new DateTime(2024, 12, 6, 6, 44, 5, 648, DateTimeKind.Local).AddTicks(8581), "frakk@gmail.com", null },
+                    { new Guid("fe0d043f-4b40-41d2-9657-ed703749a946"), "Szia Elek!\nÉrdekel a házad!", new DateTime(2024, 12, 6, 6, 44, 5, 648, DateTimeKind.Local).AddTicks(8534), "mirmur@gmail.com", null }
                 });
 
             migrationBuilder.InsertData(
@@ -129,8 +129,8 @@ namespace EstateSales.Backend.Migrations
                 columns: new[] { "Id", "Email", "Name", "Number", "Password" },
                 values: new object[,]
                 {
-                    { new Guid("0991eebc-df6a-43c7-9672-fa54b23bb001"), "teszt@teszt.com", "Teszt Eszter", "+36-20-735-2742", "teszt" },
-                    { new Guid("5fab70bd-b457-4da5-ad55-8bb41cb789f4"), "mekk@mek.com", "Mekk Elek", "+36/309025476", "mekmek" }
+                    { new Guid("d938ba9e-155d-4190-9e04-0c0e9814a0bc"), "mekk@mek.com", "Mekk Elek", "+36/309025476", "mekmek" },
+                    { new Guid("f3c8aef9-4c0c-4786-bc76-85c419dfe39a"), "teszt@teszt.com", "Teszt Eszter", "+36-20-735-2742", "teszt" }
                 });
 
             migrationBuilder.CreateIndex(
