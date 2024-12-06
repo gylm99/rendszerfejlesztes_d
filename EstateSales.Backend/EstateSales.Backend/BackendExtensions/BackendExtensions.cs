@@ -13,7 +13,7 @@ namespace EstateSales.Backend.BackendExtensions
     public static class BackendExtensions
     {
         
-        public static SelectedDatabase _selectedDatabase=SelectedDatabase.InMemory;
+        public static SelectedDatabase _selectedDatabase=SelectedDatabase.MySql;
         public static void ConfigureBackend(this IServiceCollection services)
         {
             
