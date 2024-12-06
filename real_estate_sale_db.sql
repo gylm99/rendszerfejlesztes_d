@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Gép: 127.0.0.1
--- Létrehozás ideje: 2024. Dec 06. 00:22
+-- Létrehozás ideje: 2024. Dec 06. 07:12
 -- Kiszolgáló verziója: 10.4.32-MariaDB
 -- PHP verzió: 8.2.12
 
@@ -48,10 +48,11 @@ CREATE TABLE `advertisements` (
 --
 
 INSERT INTO `advertisements` (`Id`, `Title`, `Price`, `BaseArea`, `RoomNumber`, `Description`, `BuiltYear`, `Confort`, `FloorLevel`, `MainBuildingFloorLevel`, `HasElevator`, `Orientation`, `UserId`) VALUES
-('39dd19f3-e486-481d-90a9-bf3e6ec9694b', 'Családi ház kertvárosi övezetben', 85000000, 120, 4, 'Csendes környék, nagy kerttel.', 2005, 'Komfortos', 0, 1, 0, 'Nyugat', NULL),
-('5738cfed-8495-413e-97f4-9c642b6a4e53', 'Új építésű penthouse', 150000000, 200, 5, 'Luxus szintű lakás panorámás kilátással.', 2022, 'Extra luxus', 5, 5, 1, 'Kelet-Dél', NULL),
-('6e336009-ea37-4d87-9a98-2dffef21f4b6', 'Felújítandó lakás', 30000000, 50, 2, 'Kiváló befektetési lehetőség a belvárosban.', 1980, 'Alap', 3, 5, 0, 'Észak', NULL),
-('ef4b28b9-1a17-4c37-b647-7bf18ebd2aba', 'Modern lakás a belvárosban', 45000000, 75.5, 3, 'Tágas, világos lakás remek közlekedéssel.', 2010, 'Luxus', 2, 4, 1, 'Dél', NULL);
+('249f17df-fba1-4c3c-86c0-6f5ccb92dbc2', 'Példa Hirdetés', 15000000, 120, 4, 'Nagy nappali és 2 hálószoba.', 1980, 'Luxus', 4, 4, 1, 'Észak', 'd938ba9e-155d-4190-9e04-0c0e9814a0bc'),
+('4b910331-6bd9-46f9-9f9b-7a89eff7fe94', 'Modern lakás a belvárosban', 45000000, 75.5, 3, 'Tágas, világos lakás remek közlekedéssel.', 2010, 'Luxus', 2, 4, 1, 'Dél', NULL),
+('70602bc9-41cc-42a7-89cf-3084c5bcd328', 'Felújítandó lakás', 30000000, 50, 2, 'Kiváló befektetési lehetőség a belvárosban.', 1980, 'Alap', 3, 5, 0, 'Észak', NULL),
+('7bd112da-6095-4958-a5d8-0658d3acdf71', 'Családi ház kertvárosi övezetben', 85000000, 120, 4, 'Csendes környék, nagy kerttel.', 2005, 'Komfortos', 0, 1, 0, 'Nyugat', NULL),
+('a462b0d3-e69b-491f-9c1c-9b582a796e04', 'Új építésű penthouse', 150000000, 200, 5, 'Luxus szintű lakás panorámás kilátással.', 2022, 'Extra luxus', 5, 5, 1, 'Kelet-Dél', NULL);
 
 -- --------------------------------------------------------
 
@@ -140,13 +141,6 @@ CREATE TABLE `aspnetusers` (
   `AccessFailedCount` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_hungarian_ci;
 
---
--- A tábla adatainak kiíratása `aspnetusers`
---
-
-INSERT INTO `aspnetusers` (`Id`, `UserName`, `NormalizedUserName`, `Email`, `NormalizedEmail`, `EmailConfirmed`, `PasswordHash`, `SecurityStamp`, `ConcurrencyStamp`, `PhoneNumber`, `PhoneNumberConfirmed`, `TwoFactorEnabled`, `LockoutEnd`, `LockoutEnabled`, `AccessFailedCount`) VALUES
-('446a9f6d-a611-4a27-a972-a50d01f503e2', 'gylm99@gmail.com', 'GYLM99@GMAIL.COM', 'gylm99@gmail.com', 'GYLM99@GMAIL.COM', 0, 'AQAAAAIAAYagAAAAECtQRitIPWe5HLMg1WlFMRWwVj3q5DArZA+A3nMdCSDbaTqitxrz0UvkbWgO/A5jlg==', 'XFP7ZWXN7UHFYM3TPVY6SXX5NNBYLBV6', '51ecc685-9494-4d10-84cc-80b5a76dcb76', NULL, 0, 0, NULL, 1, 0);
-
 -- --------------------------------------------------------
 
 --
@@ -179,8 +173,9 @@ CREATE TABLE `messages` (
 --
 
 INSERT INTO `messages` (`Id`, `SenderEmailAddress`, `Content`, `CreatedAt`, `UserId`) VALUES
-('840a4d02-d98b-41b1-a5d2-85a37e1c8e3f', 'frakk@gmail.com', 'Szia Eszter!\nÉrdekel a házad!', '2024-12-05 22:51:37.056976', NULL),
-('c1195499-d33b-46be-a190-b0c9701c2632', 'mirmur@gmail.com', 'Szia Elek!\nÉrdekel a házad!', '2024-12-05 22:51:37.056971', NULL);
+('52501155-888a-4236-aa56-be6516992598', 'mirmur@gmail.com', 'Szia Elek! Tetszik a házad, venném', '2024-12-06 06:52:15.705829', 'd938ba9e-155d-4190-9e04-0c0e9814a0bc'),
+('9ebcab83-7fca-4db9-ae57-a0b57fbda7bf', 'frakk@gmail.com', 'Szia Eszter!\nÉrdekel a házad!', '2024-12-06 06:44:05.648858', NULL),
+('fe0d043f-4b40-41d2-9657-ed703749a946', 'mirmur@gmail.com', 'Szia Elek!\nÉrdekel a házad!', '2024-12-06 06:44:05.648853', NULL);
 
 -- --------------------------------------------------------
 
@@ -191,8 +186,23 @@ INSERT INTO `messages` (`Id`, `SenderEmailAddress`, `Content`, `CreatedAt`, `Use
 CREATE TABLE `photos` (
   `Id` char(36) NOT NULL,
   `ImagePath` longtext NOT NULL,
-  `AdvertisementId` char(36) NOT NULL
+  `AdvertisementId` char(36) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_hungarian_ci;
+
+--
+-- A tábla adatainak kiíratása `photos`
+--
+
+INSERT INTO `photos` (`Id`, `ImagePath`, `AdvertisementId`) VALUES
+('099ebff5-1200-4059-99b1-cf4c02ae1cda', '/uploads/249f17df-fba1-4c3c-86c0-6f5ccb92dbc2/cc9cea1f-609b-43da-b098-60a1ac75f737.jpg', '249f17df-fba1-4c3c-86c0-6f5ccb92dbc2'),
+('1848670b-e3ef-4b3f-a887-10244a98cb03', '/uploads/249f17df-fba1-4c3c-86c0-6f5ccb92dbc2/7cba3a50-6b5d-4c4b-a8dd-496cdec7a224.jpg', '249f17df-fba1-4c3c-86c0-6f5ccb92dbc2'),
+('1f3105d0-312c-41a1-8345-ec519ac89bc8', '/uploads/249f17df-fba1-4c3c-86c0-6f5ccb92dbc2/30c2e7cd-34b1-491b-8744-4808526215c3.jpg', '249f17df-fba1-4c3c-86c0-6f5ccb92dbc2'),
+('26716e77-147b-4e6a-9143-0ce8c04219aa', '/uploads/249f17df-fba1-4c3c-86c0-6f5ccb92dbc2/98c8f9e5-4538-4f75-93be-eaa01ac6755c.jpg', '249f17df-fba1-4c3c-86c0-6f5ccb92dbc2'),
+('27fd0f4d-0fb7-4290-be76-4ecf2f299032', '/uploads/249f17df-fba1-4c3c-86c0-6f5ccb92dbc2/af0baa78-9a2f-47a3-b03b-0dffd92fa4f2.jpg', '249f17df-fba1-4c3c-86c0-6f5ccb92dbc2'),
+('638f5220-acc6-4742-8d56-caddffbbdf81', '/uploads/249f17df-fba1-4c3c-86c0-6f5ccb92dbc2/60a0411e-9556-4b8f-b7fe-45177e198c24.jpg', '249f17df-fba1-4c3c-86c0-6f5ccb92dbc2'),
+('c1cfc204-5220-4655-a81f-07901532db13', '/uploads/249f17df-fba1-4c3c-86c0-6f5ccb92dbc2/f41ae022-075b-4cd6-8911-743f2b7f335a.jpg', '249f17df-fba1-4c3c-86c0-6f5ccb92dbc2'),
+('c3d53182-900c-4041-9e07-f6112f1adcf5', '/uploads/249f17df-fba1-4c3c-86c0-6f5ccb92dbc2/95a3821f-c585-4b33-ba0c-1a899abd2e06.jpg', '249f17df-fba1-4c3c-86c0-6f5ccb92dbc2'),
+('f9f5a471-bbcd-4e6f-8a7a-c5ea31a270cd', '/uploads/249f17df-fba1-4c3c-86c0-6f5ccb92dbc2/af2a36ff-4e7d-49d0-9a9d-68b7c76fdaa8.jpg', '249f17df-fba1-4c3c-86c0-6f5ccb92dbc2');
 
 -- --------------------------------------------------------
 
@@ -213,8 +223,8 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`Id`, `Name`, `Email`, `Password`, `Number`) VALUES
-('0991eebc-df6a-43c7-9672-fa54b23bb001', 'Teszt Eszter', 'teszt@teszt.com', 'teszt', '+36-20-735-2742'),
-('5fab70bd-b457-4da5-ad55-8bb41cb789f4', 'Mekk Elek', 'mekk@mek.com', 'mekmek', '+36/309025476');
+('d938ba9e-155d-4190-9e04-0c0e9814a0bc', 'Mekk Elek', 'mekk@mek.com', 'mekmek', '+36/309025476'),
+('f3c8aef9-4c0c-4786-bc76-85c419dfe39a', 'Teszt Eszter', 'teszt@teszt.com', 'teszt', '+36-20-735-2742');
 
 -- --------------------------------------------------------
 
@@ -232,8 +242,8 @@ CREATE TABLE `__efmigrationshistory` (
 --
 
 INSERT INTO `__efmigrationshistory` (`MigrationId`, `ProductVersion`) VALUES
-('20241205215137_m1', '8.0.10'),
-('20241205222804_m1', '8.0.10');
+('20241206054405_m2', '8.0.10'),
+('20241206061028_m2', '8.0.10');
 
 --
 -- Indexek a kiírt táblákhoz
